@@ -4,25 +4,73 @@ body {
 	font-size: 18px;
 	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
-}
-
-.container {
 	max-width: 390px;
 }
 
-.inner {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px 200px;
-}
 
-.img {
-	width: 130px;
-}
-
-.item {
+.header1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
 	text-align: center;
 }
+
+.header2 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 14px;
+	text-align: center;
+}
+
+.header3 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 13px;
+	text-align: center;
+	font-weight: 500;
+}
+
+.cost {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 35px;
+	text-align: right;
+}
+
+.label {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 12px;
+	text-align: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: max-content;
+}
+
+.grid_buttons {
+	display: grid;
+	grid-template-columns: 37% 63%;
+	grid-template-rows: max-content;
+}
+
+.input_block {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 2;
+}
+
+.background {
+	background-color: aqua;
+}
+
+
+
+
+.img {
+	width: 50px;
+}
+
+/* .item {
+	text-align: center;
+} */
 
 .btn {
 	display: inline-block;
