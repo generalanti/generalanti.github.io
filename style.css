@@ -10,19 +10,19 @@ body {
 
 .header1 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: center;
 }
 
 .header2 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 }
 
 .header3 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 13px;
+	font-size: 15px;
 	text-align: center;
 	font-weight: 500;
 }
@@ -39,6 +39,31 @@ body {
 	text-align: center;
 }
 
+
+
+.container {
+	margin: 20px;
+}
+
+div[class*=background] {
+	padding: 10px 3px 10px 3px;
+	box-shadow: 2px 3px 5px black;
+	border-radius: 20px;
+
+}
+
+.background_new {
+	background-color: #D5E8D4;
+}
+
+.background_exist {
+	background-color: #F8CECC;
+}
+
+.background_other {
+	background-color: #FFF2CC;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -46,6 +71,8 @@ body {
 }
 
 .grid_buttons {
+	margin: 10px;
+	padding: 5px;
 	display: grid;
 	grid-template-columns: 37% 63%;
 	grid-template-rows: max-content;
@@ -57,16 +84,21 @@ body {
 	grid-template-rows: 2;
 }
 
-.background {
-	background-color: aqua;
+.input_number {
+	width: 130px;
+	height: 40px;
+}
+
+.byn_order {
+	background-color: #66FF66;
 }
 
 
 
-
+/* 
 .img {
 	width: 50px;
-}
+} */
 
 /* .item {
 	text-align: center;
