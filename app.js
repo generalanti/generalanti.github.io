@@ -95,7 +95,3 @@ ${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p); 
 
-
-
-
-
