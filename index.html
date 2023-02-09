@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title>Design Fury!!!</title>
+	<title>Design Fury!</title>
 </head>
+
 <body>
 
-	<div class="container">
+	<!--	<div class="container">
 		<div class="inner">
 			<div class="item">
 				<input type="number" />
@@ -36,12 +38,91 @@
 			</div>
 		</div>
 	</div>
-	<div class="usercard" id="usercard"></div>
-	
+	<div class="usercard" id="usercard"></div> -->
+
+	<!-- <div class="container"> -->
+	<header>
+		<h1 class="header1">Калькулятор цен</h1>
+		<div class="cost" id="cost">Руб</div>
+	</header>
+	<br>
+
+	<main>
+		<h2 class="header2">Разработка нового дизайна</h2>
+
+		<div class="background">
+			<label>
+				Количество слайдов
+				<input type="number" class="input_number" id="slides_new" />
+			</label>
+			<label>
+				<input type="checkbox" value="option1" id="adaptations_new" />
+				Адаптация под другой маркетплейс
+			</label>
+			<br>
+			<h2 class="header2">Обработка фотографий</h2>
+			<h3 class="header3">Вырезка объектов из фона</h3>
+			<label>
+				Простых изображений
+				<input type="number" class="input_number" id="clippings_normal_new" />
+			</label>
+			<label>
+				Сложных изображений
+				<input type="number" class="input_number" id="clippings_hard_new" />
+			</label>
+		</div>
+
+		<h2 class="header2">Доработка готового дизайна под другой продукт</h2>
+		<div class="background">
+			<label>
+				Количество слайдов
+				<input type="number" class="input_number" id="slides_exist" />
+			</label>
+			<label>
+				<input type="checkbox" value="option1" id="adaptations_exist" />
+				Адаптация под другой маркетплейс
+			</label>
+			<br>
+			<h2 class="header2">Обработка фотографий</h2>
+			<h3 class="header3">Вырезка объектов из фона</h3>
+			<label>
+				Простых изображений
+				<input type="number" class="input_number" id="clippings_normal_exist" />
+			</label>
+			<label>
+				Сложных изображений
+				<input type="number" class="input_number" id="clippings_hard_exist" />
+			</label>
+		</div>
+
+		<h2 class="header2">Адаптация готового дизайна под другой маркетплейс</h2>
+		<div class="background">
+			<label>
+				Количество слайдов
+				<input type="number" class="input_number" id="adaptations_other" />
+			</label>
+			<p class="adaptations_description">Текст пояснения Текст пояснения Текст пояснения</p>
+		</div>
+
+		<button type="button" class="btn_clear_all" id="clear_all">Очистить</button>
+		<button type="button" class="btn_order" id="order">Заказать</button>
+	</main>
+
+
+
+	<footer>
+
+	</footer>
+
+
+
+
+
 
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script src="app.js"></script>
 </body>
+
 </html>
 
 <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
