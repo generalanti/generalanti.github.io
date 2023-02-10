@@ -2,8 +2,10 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
-	color: var(--tg-theme-text-color);
-	background: var(--tg-theme-bg-color);
+	/* color: var(--tg-theme-text-color); */
+	/* background: var(--tg-theme-bg-color); */
+	color: black;
+	background: white;
 	max-width: 390px;
 }
 
@@ -14,7 +16,7 @@ body {
 	text-align: center;
 }
 
-.header2 {
+.header2, .accordion_header {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 16px;
 	text-align: center;
@@ -42,30 +44,31 @@ body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 12px;
 	text-align: center;
+	word-wrap: break-word;
 }
 
 
 
-.container {
+.accordion {
 	margin: 20px;
 }
 
-div[class*=background] {
+div[class*=content] {
 	padding: 10px 3px 10px 3px;
 	box-shadow: 2px 3px 5px black;
 	border-radius: 20px;
 
 }
 
-.background_new {
+.content_new {
 	background-color: #D5E8D4;
 }
 
-.background_exist {
+.content_exist {
 	background-color: #F8CECC;
 }
 
-.background_other {
+.content_other {
 	background-color: #FFF2CC;
 }
 
@@ -92,10 +95,46 @@ div[class*=background] {
 .input_number {
 	width: 130px;
 	height: 40px;
+	border-width: 1px;
+	border-radius: 10px;
+	font-family: inherit;
+	
 }
 
+/* убираем стрелки в инпутах */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.input_number:focus {
+	outline: 2px solid aqua;
+}
+/* ----------------------------------- */
 
 
+
+.adapt_checkbox {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: max-content;
+	position: relative;
+	top: 20px;
+}
+
+input[type=checkbox]:focus {
+	outline: none;
+	border-style: solid; 
+	border-width: 1px;
+	border-radius: 2px;
+	border-color: aqua;
+}
 
 /* 
 .img {
@@ -109,10 +148,11 @@ div[class*=background] {
 .btn {
 	display: inline-block;
 	padding: 10px 20px;
+	margin: 10px;
 	border: none;
-	background: rgb(248, 168, 24);
+	/* background: rgb(248, 168, 24); */
 	border-radius: 10px;
-	color: #fff;
+	/* color: #fff; */
 	text-transform: uppercase;
 	font-weight: 700;
 
