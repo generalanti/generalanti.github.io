@@ -270,6 +270,10 @@ div[class*="arrow"] {
   left: 50%;  
   transform: translateX(-50%) translateY(-50%);
   transition: all 250ms cubic-bezier(.93,.1,.42,.91);
+  
+  /* easier but a little uglier way*/
+  /* -webkit-transition: border-radius 250ms;
+  transition: border-radius 250ms; */
 }
 
 .arrow_pink {
