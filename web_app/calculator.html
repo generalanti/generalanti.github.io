@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Design Fury!</title>
+</head>
+
+<body>
+
+	<!-- <div class="usercard" id="usercard"></div> -->
+
+
+	<header>
+		<h1 class="header1">Калькулятор цен</h1>
+		<div class="cost" id="cost" title="Стоимость">Руб</div>
+	</header>
+	<br>
+
+	<main>
+		<div class="accordion">
+			<div class="accordion_item">
+				<div class="accordion_trigger">
+					<h2 class="header2">Разработка нового дизайна</h2>
+				</div>
+				<div class="accordion_content">
+					<div class="content_new">
+						<div class="grid">
+							<div class="input_block">
+								<label class="label">
+									Количество слайдов
+									<input type="number" class="input_number" id="slides_new" min="1" max="999" />
+								</label>
+							</div>
+							<div class="adapt_checkbox">
+								<input type="checkbox" value="option1" id="adaptations_new" />
+								<label class="label">
+									Адаптация под другой маркетплейс
+								</label>
+							</div>
+						</div>
+						<br>
+						<h2 class="header2">Обработка фотографий</h2>
+						<h3 class="header3">Вырезка объектов из фона</h3>
+						<div class="grid">
+							<div class="input_block">
+								<label class="label">
+									Простых изображений
+									<input type="number" class="input_number" id="clippings_normal_new" min="1"
+										max="999" />
+								</label>
+							</div>
+							<div class="input_block">
+								<label class="label">
+									Сложных изображений
+									<input type="number" class="input_number" id="clippings_hard_new" min="1"
+										max="999" />
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="accordion_item">
+				<div class="accordion_trigger">
+					<h2 class="header2">Доработка готового дизайна под другой продукт</h2>
+				</div>
+				<div class="accordion_content">
+					<div class="content_exist">
+						<div class="grid">
+							<div class="input_block">
+								<label class="label">
+									Количество слайдов
+									<input type="number" class="input_number" id="slides_exist" min="1" max="999" />
+								</label>
+							</div>
+							<div class="adapt_checkbox">
+								<input type="checkbox" value="option1" id="adaptations_exist" />
+								<label class="label">
+									Адаптация под другой маркетплейс
+								</label>
+							</div>
+
+						</div>
+						<br>
+						<h2 class="header2">Обработка фотографий</h2>
+						<h3 class="header3">Вырезка объектов из фона</h3>
+						<div class="grid">
+							<div class="input_block">
+								<label class="label">
+									Простых изображений
+									<input type="number" class="input_number" id="clippings_normal_exist" min="1"
+										max="999" />
+								</label>
+							</div>
+							<div class="input_block">
+								<label class="label">
+									Сложных изображений
+									<input type="number" class="input_number" id="clippings_hard_exist" min="1"
+										max="999" />
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion_item">
+				<div class="accordion_trigger">
+					<h2 class="header2">Адаптация готового дизайна под другой маркетплейс</h2>
+				</div>
+				<div class="accordion_content">
+					<div class="content_other">
+						<div class="grid">
+							<div class="input_block">
+								<label class="label">
+									Количество слайдов
+									<input type="number" class="input_number" id="adaptations_other" min="1"
+										max="999" />
+								</label>
+							</div>
+							<p class="adaptations_description">Текст пояснения Текст пояснения Текст пояснения</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="input_block">
+			<label class="label">
+				<input type="number" class="input_number" id="discount" />
+				Скидка постоянного клиента
+			</label>
+		</div>
+
+		<div class="grid_buttons">
+			<button type="button" class="btn" id="clear_all">Очистить</button>
+			<button type="button" class="btn" id="order">Заказать</button>
+		</div>
+		<span class="lift_up" id="lift_up">
+			<img src="1.png" alt="Burger" class="img">
+		</span>
+
+
+
+	</main>
+
+
+
+	<footer>
+
+	</footer>
+
+
+
+
+
+
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->

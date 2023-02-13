@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  /* color: var(--tg-theme-text-color); */
+  /* background: var(--tg-theme-bg-color); */
+  color: black;
+  background: white;
+  max-width: 390px;
+}
+
+.header1 {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 25px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  /* main_color */
+
+  color: #26252a;
+}
+
+.header2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.header3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.cost {
+  padding: 10px;
+  margin: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  text-align: right;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+}
+
+.label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.accordion {
+  margin: 20px;
+}
+
+div[class*="content_"] {
+  padding: 10px 3px 10px 3px;
+  box-shadow: 2px 3px 5px black;
+  border-radius: 20px;
+}
+
+.content_new {
+  background-color: #d5e8d4;
+}
+
+.content_exist {
+  background-color: #f8cecc;
+}
+
+.content_other {
+  background-color: #fff2cc;
+}
+
+.accordion_content {
+  background-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content;
+}
+
+.grid_buttons {
+  margin: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 37% 63%;
+  grid-template-rows: max-content;
+}
+
+.input_block {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 2;
+}
+
+.input_number {
+  width: 130px;
+  height: 40px;
+  border-width: 1px;
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+/* убираем стрелки в инпутах */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input_number:focus {
+  outline: 2px solid aqua;
+}
+/* ----------------------------------- */
+
+.adapt_checkbox {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: max-content;
+  position: relative;
+  top: 20px;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: aqua;
+}
+
+/* 
+.img {
+	width: 50px;
+} */
+
+/* .item {
+	text-align: center;
+} */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background: #ed568c;
+  border: 1px solid #26252a;
+  border-radius: 20px;
+}
+
+.btn:focus {
+  border-radius: 0px;
+}
+
+.btn:hover {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  /* display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center; */
+
+  /* position: absolute;
+	left: 12.58%;
+	right: 12.58%;
+	top: 57.14%;
+	bottom: 14.29%; */
+
+  /* btn_color_2 */
+
+  /* main_color */
+  border: 2px solid #26252a;
+  border-radius: 0px;
+}
+
+/*
+var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color)
+*/
+
+
+/* ------------------------------------ */
+
+.line {
+  border: none;
+  background-color: #26252A; 
+  height: 1px;
+  align-self: center;
+  width: 350px;
+}
+
+
+.item_wraper {
+  margin: 0px;
+  padding: 0px;
+  width: 350px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: auto 37px;
+  grid-template-rows: 40px;
+  align-items: center;
+
+}
+
+
+.item_wraper:hover div[class*="arrow"] {
+  border-radius: 2px;
+}
+
+.item_label {
+  display: table-cell;
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  /* line-height: 20px; */
+  text-align: center;
+  vertical-align: middle;
+  
+  /* main_color */
+  
+  color: #26252A;
+
+  
+}
+
+.item_label:link {
+  text-decoration: none;
+}
+
+.item_label:visited {
+  text-decoration: none;
+}
+
+div[class*="arrow"] {
+  display: block;
+  place-self: center;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border-color: #26252A;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  display: grid;
+  place-items: center;
+
+  position: relative;
+  top: 50%;
+  left: 50%;  
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 250ms cubic-bezier(.93,.1,.42,.91);
+}
+
+.arrow_pink {
+  background-color: #FF8AFA;
+}
+
+.arrow_green {
+  background-color: #A9FF8A;
+}
+
