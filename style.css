@@ -15,14 +15,11 @@ body {
   font-weight: 800;
   font-size: 20px;
   line-height: 25px;
-  /* identical to box height */
-
-  text-align: center;
-  letter-spacing: 0.04em;
-
-  /* main_color */
-
   color: #26252a;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 40px;
 }
 
 .header2 {
@@ -200,6 +197,18 @@ var(--tg-theme-button-text-color)
 
 /* ------------------------------------ */
 
+.bckgrnd_top_icon {
+  margin-left: 9px;
+  margin-bottom: 23px;
+  padding: 0px;
+}
+
+.bckgrnd_bot_icon {
+  margin-top: 45px;
+  margin-left: 115px;
+  padding: 0px;
+}
+
 .line {
   border: none;
   background-color: #26252A; 
@@ -210,37 +219,37 @@ var(--tg-theme-button-text-color)
 
 
 .item_wraper {
-  margin: 0px;
+  margin-left: 20px;
   padding: 0px;
   width: 350px;
   height: 40px;
   display: grid;
-  grid-template-columns: auto 37px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 40px;
-  align-items: center;
+  justify-items: center;
 
 }
 
 
 .item_wraper:hover div[class*="arrow"] {
-  border-radius: 2px;
+  border-radius: 0px;
+  border-width: 2px;
 }
 
 .item_label {
-  display: table-cell;
+  /* display: table-cell; */
   font-family: 'Overpass Mono';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  /* line-height: 20px; */
-  text-align: center;
-  vertical-align: middle;
-  
-  /* main_color */
-  
-  color: #26252A;
+  /* text-align: center; */
+  /* vertical-align: middle; */
+  align-self: center;
+  justify-self: start;
+  margin-left: 56px;
+  padding: 0px;
 
-  
+  color: #26252A;
 }
 
 .item_label:link {
@@ -253,10 +262,11 @@ var(--tg-theme-button-text-color)
 
 div[class*="arrow"] {
   display: block;
-  place-self: center;
+  align-self: center;
+  justify-self: end;
   width: 35px;
   height: 35px;
-  margin: 0;
+  margin-right: 56px;
   padding: 0;
   border-color: #26252A;
   border-radius: 50%;
@@ -264,16 +274,8 @@ div[class*="arrow"] {
   border-style: solid;
   display: grid;
   place-items: center;
-
-  position: relative;
-  top: 50%;
-  left: 50%;  
-  transform: translateX(-50%) translateY(-50%);
-  transition: all 250ms cubic-bezier(.93,.1,.42,.91);
   
-  /* easier but a little uglier way*/
-  /* -webkit-transition: border-radius 250ms;
-  transition: border-radius 250ms; */
+  transition: all 200ms cubic-bezier(.93,.1,.42,.91);
 }
 
 .arrow_pink {
