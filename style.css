@@ -9,6 +9,22 @@ body {
   max-width: 390px;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 .header1 {
   font-family: "Unbounded";
   font-style: normal;
@@ -194,7 +210,6 @@ var(--tg-theme-button-color)
 var(--tg-theme-button-text-color)
 */
 
-
 /* ------------------------------------ */
 
 .bckgrnd_top_icon {
@@ -211,25 +226,22 @@ var(--tg-theme-button-text-color)
 
 .line {
   border: none;
-  background-color: #26252A; 
+  background-color: #26252a;
   height: 1px;
   align-self: center;
   width: 350px;
 }
 
-
 .item_wraper {
-  margin-left: 20px;
+  margin: 0px 20px 0px 20px;
   padding: 0px;
   width: 350px;
   height: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 50px;
   grid-template-rows: 40px;
   justify-items: center;
-
 }
-
 
 .item_wraper:hover div[class*="arrow"] {
   border-radius: 0px;
@@ -238,7 +250,7 @@ var(--tg-theme-button-text-color)
 
 .item_label {
   /* display: table-cell; */
-  font-family: 'Overpass Mono';
+  font-family: "Overpass Mono";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -246,10 +258,10 @@ var(--tg-theme-button-text-color)
   /* vertical-align: middle; */
   align-self: center;
   justify-self: start;
-  margin-left: 56px;
+  margin-left: 36px;
   padding: 0px;
 
-  color: #26252A;
+  color: #26252a;
 }
 
 .item_label:link {
@@ -266,23 +278,22 @@ div[class*="arrow"] {
   justify-self: end;
   width: 35px;
   height: 35px;
-  margin-right: 56px;
+  margin-right: 36px;
   padding: 0;
-  border-color: #26252A;
+  border-color: #26252a;
   border-radius: 50%;
   border-width: 1px;
   border-style: solid;
   display: grid;
   place-items: center;
-  
-  transition: all 200ms cubic-bezier(.93,.1,.42,.91);
+
+  transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 .arrow_pink {
-  background-color: #FF8AFA;
+  background-color: #ff8afa;
 }
 
 .arrow_green {
-  background-color: #A9FF8A;
+  background-color: #a9ff8a;
 }
-
