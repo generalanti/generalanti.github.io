@@ -1,7 +1,19 @@
+/*
+var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color)
+*/
+
 body {
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-family: "Overpass Mono", monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
   /* color: var(--tg-theme-text-color); */
   /* background: var(--tg-theme-bg-color); */
   color: black;
@@ -25,6 +37,27 @@ a:active {
   text-decoration: none;
 }
 
+.bckgrnd_top_icon_circle {
+  background-color: #ff8afa;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: -39px;
+  height: 118px;
+  width: 118px;
+  z-index: -1;
+  transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91);
+}
+
+.bckgrnd_top_icon_circle:hover {
+  transform: translate( -50% , 0 );
+  
+  top: -3px;
+  left: -33px;
+  height: 95px;
+  width: 95px;
+}
+
 .header1 {
   font-family: "Unbounded";
   font-style: normal;
@@ -39,16 +72,17 @@ a:active {
 }
 
 .header2 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Overpass Mono", monospace;
+  font-style: normal;
+  font-weight: 700;
   font-size: 16px;
-  text-align: center;
 }
 
 .header3 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  text-align: center;
-  font-weight: 500;
+  font-family: "Overpass Mono", monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .cost {
@@ -73,23 +107,11 @@ a:active {
   margin: 20px;
 }
 
-div[class*="content_"] {
-  padding: 10px 3px 10px 3px;
-  box-shadow: 2px 3px 5px black;
-  border-radius: 20px;
+.content {
+  background-color: #26252A;
+
 }
 
-.content_new {
-  background-color: #d5e8d4;
-}
-
-.content_exist {
-  background-color: #f8cecc;
-}
-
-.content_other {
-  background-color: #fff2cc;
-}
 
 .accordion_content {
   background-color: transparent;
@@ -156,59 +178,94 @@ input[type="checkbox"]:focus {
   border-color: aqua;
 }
 
-/* 
-.img {
-	width: 50px;
-} */
-
-/* .item {
-	text-align: center;
-} */
+footer {
+  position: absolute;
+}
 
 .btn {
   display: inline-block;
   padding: 10px 20px;
   margin: 10px;
-  background: #ed568c;
+  color: #26252A;
+  
   border: 1px solid #26252a;
   border-radius: 20px;
+
+  font-family: "Overpass Mono", monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+
+  transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91);
+}
+
+#back {
+  background: #FEDD4A;
+  width: 96px;
+  height: 43px;
+}
+
+#order {
+  background: #ED568C;
+  width: 129px;
+  height: 43px;
 }
 
 .btn:focus {
   border-radius: 0px;
+  border-width: 2px;
 }
 
 .btn:hover {
   box-sizing: border-box;
-
-  /* Auto layout */
-
-  /* display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center; */
-
-  /* position: absolute;
-	left: 12.58%;
-	right: 12.58%;
-	top: 57.14%;
-	bottom: 14.29%; */
-
-  /* btn_color_2 */
-
-  /* main_color */
   border: 2px solid #26252a;
   border-radius: 0px;
 }
 
-/*
-var(--tg-theme-bg-color)
-var(--tg-theme-text-color)
-var(--tg-theme-hint-color)
-var(--tg-theme-link-color)
-var(--tg-theme-button-color)
-var(--tg-theme-button-text-color)
-*/
+/* "Clear all" button */
+
+.btn_bot {
+  /* position: absolute; */
+  bottom: 0px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 126px auto;
+  font-family: "Overpass Mono", monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  
+  background: #26252A;
+
+  height: 59px;
+  width: 390px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.clear_all_btn_icon {
+  height: 20px;
+  width: 16px;
+  justify-self: left;
+  margin-left: 106px;
+}
+
+.clear_all_label {
+  justify-self: right;
+  margin-right: 104px;
+  color: #CDCDCD;
+}
+
+.btn_bot:hover svg path {
+  fill: #C0E1FF;
+}
+
+  
+.btn_bot:hover div {
+  color: #C0E1FF;
+}
+  
+
 
 /* ------------------------------------ */
 
@@ -249,13 +306,10 @@ var(--tg-theme-button-text-color)
 }
 
 .item_label {
-  /* display: table-cell; */
-  font-family: "Overpass Mono";
+  font-family: "Overpass Mono", monospace;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  /* text-align: center; */
-  /* vertical-align: middle; */
   align-self: center;
   justify-self: start;
   margin-left: 36px;

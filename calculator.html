@@ -4,6 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@500;700&family=Play:wght@700&family=Unbounded:wght@800&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>Design Fury!</title>
 </head>
@@ -14,7 +17,9 @@
 
 
 	<header>
-		<h1 class="header1">Калькулятор цен</h1>
+		<div class="bckgrnd_top_icon_circle"></div>
+		<br class="top_filler">
+		<div class="header1">/Карточки товара</div>
 		<div class="cost" id="cost" title="Стоимость">Руб</div>
 	</header>
 	<br>
@@ -26,7 +31,7 @@
 					<h2 class="header2">Разработка нового дизайна</h2>
 				</div>
 				<div class="accordion_content">
-					<div class="content_new">
+					<div class="content">
 						<div class="grid">
 							<div class="input_block">
 								<label class="label">
@@ -70,7 +75,7 @@
 					<h2 class="header2">Доработка готового дизайна под другой продукт</h2>
 				</div>
 				<div class="accordion_content">
-					<div class="content_exist">
+					<div class="content">
 						<div class="grid">
 							<div class="input_block">
 								<label class="label">
@@ -113,7 +118,7 @@
 					<h2 class="header2">Адаптация готового дизайна под другой маркетплейс</h2>
 				</div>
 				<div class="accordion_content">
-					<div class="content_other">
+					<div class="content">
 						<div class="grid">
 							<div class="input_block">
 								<label class="label">
@@ -136,21 +141,26 @@
 			</label>
 		</div>
 
-		<div class="grid_buttons">
-			<button type="button" class="btn" id="clear_all">Очистить</button>
-			<button type="button" class="btn" id="order">Заказать</button>
-		</div>
-		<span class="lift_up" id="lift_up">
-			<img src="1.png" alt="Burger" class="img">
-		</span>
-
-
-
 	</main>
 
 
 
 	<footer>
+		<img class="bckgrnd_bot_icon" src="/src/calculator_pic_f.svg" alt="dots icon">
+		<div class="grid_buttons">
+			<button type="button" class="btn" id="back">Назад</button>
+			<button type="button" class="btn" id="order">Заказать</button>
+
+		</div>
+
+		<button type="button" class="btn_bot" id="clear_all">
+			<svg class="clear_all_btn_icon" width="16" height="20" viewBox="0 0 16 20" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path d="M4 2L6 0H10L12 2H16V4H0V2H4ZM1 6H15L14 20H2L1 6ZM6 8V18H7V8H6ZM9 8V18H10V8H9Z"
+					fill="#CDCDCD" />
+			</svg>
+			<div class="clear_all_label">Сбросить расчет</div>
+		</button>
 
 	</footer>
 
