@@ -25,57 +25,42 @@
 	<br>
 
 	<main>
+		<hr class="line">
 		<div class="accordion">
 			<div class="accordion_item">
 				<div class="accordion_trigger">
-					<h2 class="header2">Разработка нового дизайна</h2>
+					<div class="accordion_header">Новый дизайн</div>
+					<img class="item_icon" src="/src/arrow.svg" alt="dots icon">
 				</div>
 				<div class="accordion_content">
-					<div class="content">
-						<div class="grid">
-							<div class="input_block">
-								<label class="label">
-									Количество слайдов
-									<input type="number" class="input_number" id="slides_new" min="1" max="999" />
-								</label>
-							</div>
-							<div class="adapt_checkbox">
-								<input type="checkbox" value="option1" id="adaptations_new" />
-								<label class="label">
-									Адаптация под другой маркетплейс
-								</label>
-							</div>
+					<div class="accordion_inner">
+						<div class="content_grid1">
+							<div class="content_label2">Количество слайдов с инфографикой</div>
+							<input type="number" class="input_number" id="slides_new" min="1" max="999" />
+							<div class="content_label1">Обработка фотографий</div>
+							<div class="content_label3">Вырезка объектов из фона</div>
+							<div class="content_label2">Простые изображения</div>
+							<div class="content_label4">Одежда, флаконы, предметы</div>
+							<input type="number" class="input_number" id="clippings_normal_new" min="1" max="999" />
+							<div class="content_label2">Сложные изображения</div>
+							<div class="content_label4">Люди, пушистые объекты</div>
+							<input type="number" class="input_number" id="clippings_hard_new" min="1" max="999" />
 						</div>
-						<br>
-						<h2 class="header2">Обработка фотографий</h2>
-						<h3 class="header3">Вырезка объектов из фона</h3>
-						<div class="grid">
-							<div class="input_block">
-								<label class="label">
-									Простых изображений
-									<input type="number" class="input_number" id="clippings_normal_new" min="1"
-										max="999" />
-								</label>
-							</div>
-							<div class="input_block">
-								<label class="label">
-									Сложных изображений
-									<input type="number" class="input_number" id="clippings_hard_new" min="1"
-										max="999" />
-								</label>
-							</div>
+						<div class="content_grid2">
+							<input type="checkbox" class="adapt_checkbox" value="option1" id="adaptations_new" />
+							<div class="content_label2">Адаптация дизайна под другой маркетплейс</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
+			<hr class="line">
 
 			<div class="accordion_item">
 				<div class="accordion_trigger">
-					<h2 class="header2">Доработка готового дизайна под другой продукт</h2>
+					<div class="accordion_header">Верстка по шаблону</div>
 				</div>
 				<div class="accordion_content">
-					<div class="content">
+					<div class="accrodion_inner">
 						<div class="grid">
 							<div class="input_block">
 								<label class="label">
@@ -92,8 +77,8 @@
 
 						</div>
 						<br>
-						<h2 class="header2">Обработка фотографий</h2>
-						<h3 class="header3">Вырезка объектов из фона</h3>
+						<div class="accordion_header">Обработка фотографий</div>
+						<div class="header3">Вырезка объектов из фона</div>
 						<div class="grid">
 							<div class="input_block">
 								<label class="label">
@@ -113,12 +98,13 @@
 					</div>
 				</div>
 			</div>
+			<hr class="line">
 			<div class="accordion_item">
 				<div class="accordion_trigger">
-					<h2 class="header2">Адаптация готового дизайна под другой маркетплейс</h2>
+					<div class="accordion_header">Адаптация</div>
 				</div>
 				<div class="accordion_content">
-					<div class="content">
+					<div class="accrodion_inner">
 						<div class="grid">
 							<div class="input_block">
 								<label class="label">
@@ -133,6 +119,7 @@
 				</div>
 
 			</div>
+			<hr class="line">
 		</div>
 		<div class="input_block">
 			<label class="label">

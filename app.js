@@ -22,6 +22,9 @@
 // let order = document.getElementByIdlementById("order");
 // let lift_up = document.getElementByIdlementById("lift_up");
 
+
+
+
 // accordion animation
 
 $(document).ready(function() {
