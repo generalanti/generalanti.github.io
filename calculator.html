@@ -37,16 +37,24 @@
 						<div class="content_grid1">
 							<div class="content_label2">Количество слайдов с инфографикой</div>
 							<input type="number" class="input_number" id="slides_new" min="1" max="999" />
-							<div class="content_label1">Обработка фотографий</div>
-							<div class="content_label3">Вырезка объектов из фона</div>
-							<div class="content_label2">Простые изображения</div>
-							<div class="content_label4">Одежда, флаконы, предметы</div>
-							<input type="number" class="input_number" id="clippings_normal_new" min="1" max="999" />
-							<div class="content_label2">Сложные изображения</div>
-							<div class="content_label4">Люди, пушистые объекты</div>
-							<input type="number" class="input_number" id="clippings_hard_new" min="1" max="999" />
 						</div>
 						<div class="content_grid2">
+							<div>
+								<div class="content_label1">Обработка фотографий</div>
+								<div class="content_label3">Вырезка объектов из фона</div>
+							</div>
+							<div>
+								<div class="content_label2">Простые изображения</div>
+								<div class="content_label4">Одежда, флаконы, предметы</div>
+							</div>
+							<input type="number" class="input_number" id="clippings_normal_new" min="1" max="999" />
+							<div>
+								<div class="content_label2">Сложные изображения</div>
+								<div class="content_label4">Люди, пушистые объекты</div>
+							</div>
+							<input type="number" class="input_number" id="clippings_hard_new" min="1" max="999" />
+						</div>
+						<div class="content_grid3">
 							<input type="checkbox" class="adapt_checkbox" value="option1" id="adaptations_new" />
 							<div class="content_label2">Адаптация дизайна под другой маркетплейс</div>
 						</div>
@@ -58,42 +66,33 @@
 			<div class="accordion_item">
 				<div class="accordion_trigger">
 					<div class="accordion_header">Верстка по шаблону</div>
+					<img class="item_icon" src="/src/arrow.svg" alt="dots icon">
 				</div>
 				<div class="accordion_content">
-					<div class="accrodion_inner">
-						<div class="grid">
-							<div class="input_block">
-								<label class="label">
-									Количество слайдов
-									<input type="number" class="input_number" id="slides_exist" min="1" max="999" />
-								</label>
-							</div>
-							<div class="adapt_checkbox">
-								<input type="checkbox" value="option1" id="adaptations_exist" />
-								<label class="label">
-									Адаптация под другой маркетплейс
-								</label>
-							</div>
-
+					<div class="accordion_inner">
+						<div class="content_grid1">
+							<div class="content_label2">Количество слайдов с инфографикой</div>
+							<input type="number" class="input_number" id="slides_exist" min="1" max="999" />
 						</div>
-						<br>
-						<div class="accordion_header">Обработка фотографий</div>
-						<div class="header3">Вырезка объектов из фона</div>
-						<div class="grid">
-							<div class="input_block">
-								<label class="label">
-									Простых изображений
-									<input type="number" class="input_number" id="clippings_normal_exist" min="1"
-										max="999" />
-								</label>
+						<div class="content_grid2">
+							<div>
+								<div class="content_label1">Обработка фотографий</div>
+								<div class="content_label3">Вырезка объектов из фона</div>
 							</div>
-							<div class="input_block">
-								<label class="label">
-									Сложных изображений
-									<input type="number" class="input_number" id="clippings_hard_exist" min="1"
-										max="999" />
-								</label>
+							<div>
+								<div class="content_label2">Простые изображения</div>
+								<div class="content_label4">Одежда, флаконы, предметы</div>
 							</div>
+							<input type="number" class="input_number" id="clippings_normal_exist" min="1" max="999" />
+							<div>
+								<div class="content_label2">Сложные изображения</div>
+								<div class="content_label4">Люди, пушистые объекты</div>
+							</div>
+							<input type="number" class="input_number" id="clippings_hard_exist" min="1" max="999" />
+						</div>
+						<div class="content_grid3">
+							<input type="checkbox" class="adapt_checkbox" value="option1" id="adaptations_exist" />
+							<div class="content_label2">Адаптация дизайна под другой маркетплейс</div>
 						</div>
 					</div>
 				</div>
@@ -105,28 +104,25 @@
 				</div>
 				<div class="accordion_content">
 					<div class="accrodion_inner">
-						<div class="grid">
-							<div class="input_block">
-								<label class="label">
-									Количество слайдов
-									<input type="number" class="input_number" id="adaptations_other" min="1"
-										max="999" />
-								</label>
-							</div>
-							<p class="adaptations_description">Текст пояснения Текст пояснения Текст пояснения</p>
+						<div class="content_grid4">
+							<div class="content_label2">Количество слайдов с инфографикой</div>
+							<input type="number" class="input_number" id="adaptations_other" min="1" max="999" />
+							<p class="content_label2">* Только для заказа адаптации слайдов с готовым дизайном 
+								под другой маркетплейс</p>
 						</div>
 					</div>
 				</div>
-
 			</div>
-			<hr class="line">
 		</div>
-		<div class="input_block">
-			<label class="label">
-				<input type="number" class="input_number" id="discount" />
-				Скидка постоянного клиента
-			</label>
+		<hr class="line">
+		<div class="content_grid5">
+			<div class="content_label2">Процент вашей скидки</div>
+			<input type="number" class="input_number" id="discount" />
+			<div class="content_label2">Промокод</div>
+			<input type="text" class="input_text" id="promocode" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')"/>
 		</div>
+		<hr class="line">
+
 
 	</main>
 
