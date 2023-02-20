@@ -17,7 +17,7 @@ body {
   color: #26252a;
   /* color: var(--tg-theme-text-color); */
   /* background: var(--tg-theme-bg-color); */
-  /* background: white; */
+  background: white;
   /* background: #b3b0c0; */
   max-width: 390px;
 }
