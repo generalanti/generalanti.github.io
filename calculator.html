@@ -1,162 +1,224 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@500;700&family=Play:wght@700&family=Unbounded:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Design Fury!</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@500;700&family=Play:wght@700&family=Unbounded:wght@800&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<title>Design Fury!</title>
-</head>
+  <body>
+    <!-- <div class="usercard" id="usercard"></div> -->
+    <span id="cost_container">
+      <div class="bckgrnd_cost"></div>
+      <span class="cost_output" id="cost"></span>
+    </span>
+    <header>
+      <img src="/src/calculator_pic_f.svg" alt="dots icon" />
+    </header>
 
-<body>
+    <main>
+      <div class="header1">Новый дизайн</div>
+      <div class="accordion_item">
+        <!-- <div class="accordion_trigger1"> -->
+        <!-- <div class="accordion_header">Новый дизайн</div> -->
+        <!-- <img class="item_icon" src="/src/arrow.svg" alt="dots icon" /> -->
+        <!-- </div> -->
+        <div class="accordion_content1">
+          <div class="accordion_inner">
+            <div class="content_grid1">
+              <div class="content_label2">
+                Количество слайдов с инфографикой
+              </div>
+              <input
+                type="number"
+                class="input_number"
+                id="slides_new"
+                min="1"
+                max="999"
+              />
+            </div>
+            <div class="content_grid2">
+              <div>
+                <div class="content_label1">Обработка фотографий</div>
+                <div class="content_label3">Вырезка объектов из фона</div>
+              </div>
+              <div>
+                <div class="content_label2">Простые изображения</div>
+                <div class="content_label4">Одежда, флаконы, предметы</div>
+              </div>
+              <input
+                type="number"
+                class="input_number"
+                id="clippings_normal_new"
+                min="1"
+                max="999"
+              />
+              <div>
+                <div class="content_label2">Сложные изображения</div>
+                <div class="content_label4">Люди, пушистые объекты</div>
+              </div>
+              <input
+                type="number"
+                class="input_number"
+                id="clippings_hard_new"
+                min="1"
+                max="999"
+              />
+            </div>
+            <div class="content_grid3">
+              <input
+                type="checkbox"
+                class="adapt_checkbox"
+                value="option1"
+                id="adaptations_new"
+              />
+              <div class="content_label2">
+                Адаптация дизайна под другой маркетплейс
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <hr class="line" /> -->
+      <div class="accordion">
+        <div class="accordion_item">
+          <div class="accordion_trigger">
+            <div class="accordion_header">Верстка по шаблону</div>
+            <img class="item_icon" src="/src/arrow.svg" alt="dots icon" />
+          </div>
+          <div class="accordion_content">
+            <div class="accordion_inner">
+              <div class="content_grid1">
+                <div class="content_label2">
+                  Количество слайдов с инфографикой
+                </div>
+                <input
+                  type="number"
+                  class="input_number"
+                  id="slides_exist"
+                  min="1"
+                  max="999"
+                />
+              </div>
+              <div class="content_grid2">
+                <div>
+                  <div class="content_label1">Обработка фотографий</div>
+                  <div class="content_label3">Вырезка объектов из фона</div>
+                </div>
+                <div>
+                  <div class="content_label2">Простые изображения</div>
+                  <div class="content_label4">Одежда, флаконы, предметы</div>
+                </div>
+                <input
+                  type="number"
+                  class="input_number"
+                  id="clippings_normal_exist"
+                  min="1"
+                  max="999"
+                />
+                <div>
+                  <div class="content_label2">Сложные изображения</div>
+                  <div class="content_label4">Люди, пушистые объекты</div>
+                </div>
+                <input
+                  type="number"
+                  class="input_number"
+                  id="clippings_hard_exist"
+                  min="1"
+                  max="999"
+                />
+              </div>
+              <div class="content_grid3">
+                <input
+                  type="checkbox"
+                  class="adapt_checkbox"
+                  value="option1"
+                  id="adaptations_exist"
+                />
+                <div class="content_label2">
+                  Адаптация дизайна под другой маркетплейс
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="line" />
+        <div class="accordion_item">
+          <div class="accordion_trigger">
+            <div class="accordion_header">Адаптация</div>
+          </div>
+          <div class="accordion_content">
+            <div class="accrodion_inner">
+              <div class="content_grid4">
+                <div class="content_label2">
+                  Количество слайдов с инфографикой
+                </div>
+                <input
+                  type="number"
+                  class="input_number"
+                  id="adaptations_other"
+                  min="1"
+                  max="999"
+                />
+                <p class="content_label2">
+                  * Только для заказа адаптации слайдов с готовым дизайном под
+                  другой маркетплейс
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="line" />
+      <div class="content_grid5">
+        <div class="content_label2">Процент вашей скидки</div>
+        <input type="number" class="input_number" id="discount" />
+        <div class="content_label2">Промокод</div>
+        <input
+          type="text"
+          class="input_text"
+          id="promocode"
+          autocomplete="off"
+          readonly
+          onfocus="this.removeAttribute('readonly')"
+        />
+      </div>
+      <hr class="line" />
+    </main>
 
-	<!-- <div class="usercard" id="usercard"></div> -->
+    <footer>
+      <div class="grid_buttons">
+        <button type="button" class="btn" id="back">Назад</button>
+        <button type="button" class="btn" id="order">Заказать</button>
+      </div>
 
+      <button type="button" class="btn_bot" id="clear_all">
+        <svg
+          class="clear_all_btn_icon"
+          width="16"
+          height="20"
+          viewBox="0 0 16 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 2L6 0H10L12 2H16V4H0V2H4ZM1 6H15L14 20H2L1 6ZM6 8V18H7V8H6ZM9 8V18H10V8H9Z"
+            fill="#CDCDCD"
+          />
+        </svg>
+        <div class="clear_all_label">Сбросить расчет</div>
+      </button>
+    </footer>
 
-	<header>
-		<div class="bckgrnd_top_icon_circle"></div>
-		<br class="top_filler">
-		<div class="header1">/Карточки товара</div>
-		<div class="cost" id="cost" title="Стоимость">Руб</div>
-	</header>
-	<br>
-
-	<main>
-		<hr class="line">
-		<div class="accordion">
-			<div class="accordion_item">
-				<div class="accordion_trigger">
-					<div class="accordion_header">Новый дизайн</div>
-					<img class="item_icon" src="/src/arrow.svg" alt="dots icon">
-				</div>
-				<div class="accordion_content">
-					<div class="accordion_inner">
-						<div class="content_grid1">
-							<div class="content_label2">Количество слайдов с инфографикой</div>
-							<input type="number" class="input_number" id="slides_new" min="1" max="999" />
-						</div>
-						<div class="content_grid2">
-							<div>
-								<div class="content_label1">Обработка фотографий</div>
-								<div class="content_label3">Вырезка объектов из фона</div>
-							</div>
-							<div>
-								<div class="content_label2">Простые изображения</div>
-								<div class="content_label4">Одежда, флаконы, предметы</div>
-							</div>
-							<input type="number" class="input_number" id="clippings_normal_new" min="1" max="999" />
-							<div>
-								<div class="content_label2">Сложные изображения</div>
-								<div class="content_label4">Люди, пушистые объекты</div>
-							</div>
-							<input type="number" class="input_number" id="clippings_hard_new" min="1" max="999" />
-						</div>
-						<div class="content_grid3">
-							<input type="checkbox" class="adapt_checkbox" value="option1" id="adaptations_new" />
-							<div class="content_label2">Адаптация дизайна под другой маркетплейс</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<hr class="line">
-
-			<div class="accordion_item">
-				<div class="accordion_trigger">
-					<div class="accordion_header">Верстка по шаблону</div>
-					<img class="item_icon" src="/src/arrow.svg" alt="dots icon">
-				</div>
-				<div class="accordion_content">
-					<div class="accordion_inner">
-						<div class="content_grid1">
-							<div class="content_label2">Количество слайдов с инфографикой</div>
-							<input type="number" class="input_number" id="slides_exist" min="1" max="999" />
-						</div>
-						<div class="content_grid2">
-							<div>
-								<div class="content_label1">Обработка фотографий</div>
-								<div class="content_label3">Вырезка объектов из фона</div>
-							</div>
-							<div>
-								<div class="content_label2">Простые изображения</div>
-								<div class="content_label4">Одежда, флаконы, предметы</div>
-							</div>
-							<input type="number" class="input_number" id="clippings_normal_exist" min="1" max="999" />
-							<div>
-								<div class="content_label2">Сложные изображения</div>
-								<div class="content_label4">Люди, пушистые объекты</div>
-							</div>
-							<input type="number" class="input_number" id="clippings_hard_exist" min="1" max="999" />
-						</div>
-						<div class="content_grid3">
-							<input type="checkbox" class="adapt_checkbox" value="option1" id="adaptations_exist" />
-							<div class="content_label2">Адаптация дизайна под другой маркетплейс</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<hr class="line">
-			<div class="accordion_item">
-				<div class="accordion_trigger">
-					<div class="accordion_header">Адаптация</div>
-				</div>
-				<div class="accordion_content">
-					<div class="accrodion_inner">
-						<div class="content_grid4">
-							<div class="content_label2">Количество слайдов с инфографикой</div>
-							<input type="number" class="input_number" id="adaptations_other" min="1" max="999" />
-							<p class="content_label2">* Только для заказа адаптации слайдов с готовым дизайном 
-								под другой маркетплейс</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<hr class="line">
-		<div class="content_grid5">
-			<div class="content_label2">Процент вашей скидки</div>
-			<input type="number" class="input_number" id="discount" />
-			<div class="content_label2">Промокод</div>
-			<input type="text" class="input_text" id="promocode" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')"/>
-		</div>
-		<hr class="line">
-
-
-	</main>
-
-
-
-	<footer>
-		<img class="bckgrnd_bot_icon" src="/src/calculator_pic_f.svg" alt="dots icon">
-		<div class="grid_buttons">
-			<button type="button" class="btn" id="back">Назад</button>
-			<button type="button" class="btn" id="order">Заказать</button>
-
-		</div>
-
-		<button type="button" class="btn_bot" id="clear_all">
-			<svg class="clear_all_btn_icon" width="16" height="20" viewBox="0 0 16 20" fill="none"
-				xmlns="http://www.w3.org/2000/svg">
-				<path d="M4 2L6 0H10L12 2H16V4H0V2H4ZM1 6H15L14 20H2L1 6ZM6 8V18H7V8H6ZM9 8V18H10V8H9Z"
-					fill="#CDCDCD" />
-			</svg>
-			<div class="clear_all_label">Сбросить расчет</div>
-		</button>
-
-	</footer>
-
-
-
-
-
-
-	<script src="https://telegram.org/js/telegram-web-app.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-	<script src="app.js"></script>
-</body>
-
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
 
 <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->

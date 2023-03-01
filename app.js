@@ -23,6 +23,8 @@
 // let lift_up = document.getElementByIdlementById("lift_up");
 
 
+let cost_cost = 0.07;
+document.querySelector('#cost').textContent = cost_cost;
 
 
 // accordion animation
@@ -32,6 +34,39 @@ $(document).ready(function() {
 		$(this).next('.accordion_content').slideToggle(200);
 	});
 });
+
+
+window.onscroll = function() {add_stiky()};
+
+var cost_container = document.getElementById("cost_container");
+var sticky = cost_container.offsetTop;
+
+function add_stiky() {
+  if (window.pageYOffset >= sticky) {
+    cost_container.classList.add("sticky")
+  } else {
+    cost_container.classList.remove("sticky");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
