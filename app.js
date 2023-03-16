@@ -36,21 +36,30 @@ $(document).ready(function() {
 });
 
 
-window.onscroll = function() {add_stiky()};
+// window.onscroll = function() {add_stiky()};
+//
+// var cost_container = document.getElementById("cost_container");
+// var sticky = cost_container.offsetTop;
+//
+// function add_stiky() {
+//   if (window.pageYOffset >= sticky) {
+//     cost_container.classList.add("sticky")
+//   } else {
+//     cost_container.classList.remove("sticky");
+//   }
+// }
 
-var cost_container = document.getElementById("cost_container");
-var sticky = cost_container.offsetTop;
 
-function add_stiky() {
-  if (window.pageYOffset >= sticky) {
-    cost_container.classList.add("sticky")
-  } else {
-    cost_container.classList.remove("sticky");
-  }
-}
-
-
-
+window.addEventListener(
+    "scroll",
+    () => {
+        document.body.style.setProperty(
+            "--scroll",
+            window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+        );
+    },
+    false
+);
 
 
 
