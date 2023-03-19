@@ -71,7 +71,7 @@ a:active {
 
 
 	/* transform: translate(-50%, 0); */
-	/* transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91); */
+	/* transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91); */
 }
 
 .cost_output {
@@ -230,9 +230,9 @@ input[class="accordion_checkbox"]:checked ~ .accordion_trigger::after {
 	background-color: #26252a;
 	max-height: 0px;
 	overflow: hidden;
-	-webkit-transition: 1s;
-	-o-transition: 1s;
-	transition: 1s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
 }
 /* Content unfolded condition*/
 input[class="accordion_checkbox"]:checked ~ .accordion_content {
@@ -372,7 +372,7 @@ p[class="content_label2"] {
 	text-align: right;
 	justify-self: right;
 	padding-right: 10px;
-	transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91);
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 .input_number:focus {
@@ -411,7 +411,7 @@ p[class="content_label2"] {
 	letter-spacing: 0.04em;
 	text-align: right;
 	padding-right: 10px;
-	transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91);
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 
 	/* align-self: end; */
 }
@@ -422,13 +422,7 @@ p[class="content_label2"] {
 	border-radius: 0px;
 }
 
-.grid_buttons {
-	margin: 10px;
-	padding: 5px;
-	display: grid;
-	grid-template-columns: 37% 63%;
-	grid-template-rows: max-content;
-}
+
 
 
 
@@ -466,58 +460,90 @@ p[class="content_label2"] {
 	margin-right: 0.5em;
 	background-repeat: no-repeat;
 	background-position: center center;
-	/* background-size: 100% 100%; */
 	background-image: url( '/src/checkbox_unchecked.svg' );
 }
 /* Custom checkbox checked */
 .adapt_checkbox:checked + .content_label2::before {
 	background-image: url( '/src/checkbox_checked.svg' );
 }
-
+/* Custom checkbox focus */
+.adapt_checkbox:focus + .content_label2::before {
+	background-image: url( 'src/checkbox_focused.svg' );
+}
+/* Custom checkbox hover */
+.adapt_checkbox:hover + .content_label2::before {
+	background-image: url( 'src/checkbox_focused.svg' );
+}
 
 /* Footer */
 footer {
 	position: absolute;
 }
 
+.grid_buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: none;
+	margin: 30px 0px 30px 0px;
+}
+
 .btn {
 	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
 	color: #26252a;
-
 	border: 1px solid #26252a;
 	border-radius: 20px;
-
 	font-family: "Overpass Mono", monospace;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 20px;
 
-	transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91);
+	/* transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91); */
+	transition: 0.5s;
 }
 
 #back {
-	background: #fedd4a;
-	width: 96px;
-	height: 43px;
+	justify-self: left;
+	margin-left: 72px;
+	background: #FFFFFF;
+	width: 102px;
+	height: 45px;
 }
 
 #order {
-	background: #ed568c;
-	width: 129px;
-	height: 43px;
+	justify-self: right;
+	margin-right: 57px;
+	background: #FEDD4A;
+	width: 139px;
+	height: 45px;
 }
 
-.btn:focus {
-	border-radius: 0px;
-	border-width: 2px;
-}
+/* .btn:focus { */
+/* 	border-radius: 0px; */
+/* 	border-width: 2px; */
+/* } */
 
 .btn:hover {
 	box-sizing: border-box;
 	border: 2px solid #26252a;
 	border-radius: 0px;
+}
+
+#order:active {
+	background: #26252a;
+	color: #FEDD4A;
+	box-sizing: border-box;
+	border: 2px solid #26252a;
+	border-radius: 0px;
+}
+
+#back:active {
+	background: #26252a;
+	color: #FFFFFF;
+	box-sizing: border-box;
+	border: 2px solid #26252a;
+	border-radius: 0px;
+	width: 102px;
+	height: 45px;
 }
 
 /* "Clear all" button */
@@ -630,7 +656,7 @@ div[class*="arrow"] {
 	display: grid;
 	place-items: center;
 
-	transition: all 200ms cubic-bezier(0.93, 0.1, 0.42, 0.91);
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 .arrow_pink {
