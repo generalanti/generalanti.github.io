@@ -29,11 +29,11 @@ document.querySelector('#cost').textContent = cost_cost;
 
 // accordion animation
 
-$(document).ready(function() {
-	$('.accordion_trigger').click(function() {
-		$(this).next('.accordion_content').slideToggle(200);
-	});
-});
+// $(document).ready(function() {
+// 	$('.accordion_trigger').click(function() {
+// 		$(this).next('.accordion_content').slideToggle(200);
+// 	});
+// });
 
 
 // window.onscroll = function() {add_stiky()};
