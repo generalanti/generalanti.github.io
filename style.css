@@ -152,51 +152,91 @@ a:active {
 /* 	color: #ffffff; */
 /* } */
 
-/* Accordion                      */
+/* Accordion */
 
+/* Basic rules */
 .accordion {
 	display: inline-block;
 	margin: 0px;
 	padding: 0px;
 }
 
-.accordion_trigger, .accordion_trigger1 {
-	cursor: pointer;
-	margin: 0px 20px 0px 20px;
-	padding: 10px 0px 10px 0px;
-	width: 350px;
-	height: 40px;
-	display: grid;
-	grid-template-columns: auto 50px;
-	grid-template-rows: 40px;
-	justify-items: center;
+.accordion_item {
+	position: relative;
 }
 
-/* .accordion_trigger:hover div[class*="accordion_content"] {
-  
-} */
-
+.accordion_item > input[type="checkbox"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+/* Label basic condition */
 .accordion_header {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	min-height: 50px;
+	-ms-align-items: center;
+	align-items: center;
 	font-family: "Overpass Mono", monospace;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
-	align-self: center;
-	justify-self: start;
-	margin-left: 36px;
-	padding: 0px;
+	/* margin-left: 36px; */
+	margin: 0px 20px 0px 20px;
+	padding: 10px 0px 10px 0px;
+	width: 350px;
+	/* padding: 0px; */
 	color: #26252a;
+	cursor: pointer;
+	position: relative;
 }
-
-.accordion_content, .accordion_content1 {
+/* Label checked condition*/
+input[type="checkbox"]:checked ~ .accordion_header {
+	color: #4657EF;
+}
+/* Favicon basic condition */
+.accordion_header::after {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	margin-top: -10px;
+	transition: .3s;
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("src/accordion_folded.svg");
+}
+/* Favicon checked condition*/
+input[type="checkbox"]:checked ~ .accordion_header::after {
+	transform: rotate(180deg);
+	background-image: url("src/accordion_unfolded.svg");
+}
+/* Content basic condition */
+.accordion_content, .content {
 	background-color: #26252a;
-	transition: max-height 1s;
+	max-height: 0;
 	overflow: hidden;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
 }
+/* Content unfolded condition*/
+input[type="checkbox"]:checked ~ .accordion_content {
+	max-height: 2500px;
+	-webkit-transition: 4s;
+	-o-transition: 4s;
+	transition: 4s;
+}
+/* End of Accordion */
 
-.accordion_content {
-	display: none;
-}
 
 .content_grid1 {
 	display: grid;
@@ -215,8 +255,6 @@ a:active {
 	gap: 20px 42px;
 	align-items: center;
 }
-
-
 
 .content_grid3 {
 	display: grid;
@@ -431,30 +469,7 @@ input::-webkit-inner-spin-button {
 
 }
 
-/* Accordion */
 
-#acc_chkbox1 {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-}
-
-
-acc_chkbox1 .accordion_header::after {
-	content: '';
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-image: url('src/accordion_fold.svg');
-}
-
-acc_chkbox1:checked .accordion_header::after {
-	background-image: url('src/accordion_unfold.svg');
-}
-
-/* End of Accordion */
 
 
 input[type="checkbox"]:focus {
