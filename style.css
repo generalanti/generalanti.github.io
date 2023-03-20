@@ -466,14 +466,11 @@ p[class="content_label2"] {
 .adapt_checkbox:checked + .content_label2::before {
 	background-image: url( '/src/checkbox_checked.svg' );
 }
-/* Custom checkbox focus */
-.adapt_checkbox:focus + .content_label2::before {
+/* Custom checkbox focus and hover */
+.content_label2:hover::before, .content_label2:focus::before {
 	background-image: url( 'src/checkbox_focused.svg' );
 }
-/* Custom checkbox hover */
-.adapt_checkbox:hover + .content_label2::before {
-	background-image: url( 'src/checkbox_focused.svg' );
-}
+
 
 /* Footer */
 footer {
