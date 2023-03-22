@@ -29,9 +29,6 @@ body {
 	max-width: 390px;
 }
 
-main {
-	background-color: white;
-}
 
 a:link {
 	text-decoration: none;
@@ -466,16 +463,11 @@ p[class="content_label2"] {
 .adapt_checkbox:checked + .content_label2::before {
 	background-image: url( '/src/checkbox_checked.svg' );
 }
-/* Custom checkbox focus and hover */
-.content_label2:hover::before, .content_label2:focus::before {
+/* Custom checkbox hover */
+.content_label2:hover::before {
 	background-image: url( 'src/checkbox_focused.svg' );
 }
 
-
-/* Footer */
-footer {
-	position: absolute;
-}
 
 .grid_buttons {
 	display: grid;
@@ -544,44 +536,38 @@ footer {
 }
 
 /* "Clear all" button */
-.btn_bot {
-	/* position: absolute; */
-	bottom: 0px;
-	display: grid;
-	align-items: center;
-	grid-template-columns: 126px auto;
-	font-family: "Overpass Mono", monospace;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 16px;
-
+.clear_all_container {
 	background: #26252a;
+	display: inline-block;
+}
 
-	height: 59px;
-	width: 390px;
-	padding: 0px;
-	margin: 0px;
+.clear_all_btn {
+	display: grid;
+	margin: 20px 104px 19px 106px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20px;
+	align-items: center;
 }
 
 .clear_all_btn_icon {
+	justify-self: left;
 	height: 20px;
 	width: 16px;
-	justify-self: left;
-	margin-left: 106px;
+	fill: #CDCDCD;
 }
 
 .clear_all_label {
+	height: 20px;
+	width: 148px;
 	justify-self: right;
-	margin-right: 104px;
-	color: #cdcdcd;
+	color: #CDCDCD;
 }
 
-.btn_bot:hover svg path {
-	fill: #c0e1ff;
+.clear_all_btn:hover svg path {
+	fill: #C0E1FF;
 }
-
-.btn_bot:hover div {
-	color: #c0e1ff;
+.clear_all_btn:hover .clear_all_label {
+	color: #C0E1FF;
 }
 
 /* ------------------------------------ */
