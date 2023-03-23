@@ -61,7 +61,7 @@ a:active {
 	height: 149px;
 
 	background-color: #ff8afa;
-	border-radius: 0px 70px 70px 0px;
+	border-radius: 0 70px 70px 0;
 
 	/* display: inline-block; */
 	/* z-index: 10; */
@@ -72,7 +72,6 @@ a:active {
 }
 
 .cost_output {
-	position: relative;
 	top: 30px;
 	right: 55px;
 	width: 230px;
@@ -82,7 +81,7 @@ a:active {
 	color: #FFFFFF;
 	border: 3px solid #26252A;
 	border-radius: 10px;
-	font-family: "Play";
+	font-family: "Play", monospace;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 26px;
@@ -91,11 +90,7 @@ a:active {
 	text-align: right;
 	padding: 10px 10px 10px 100px;
 	position: absolute;
-	width: 230px;
-	height: 50px;
 	left: 20px;
-	top: 30px;
-
 }
 
 
@@ -114,7 +109,7 @@ a:active {
 }
 
 .header1 {
-	font-family: "Unbounded";
+	font-family: "Unbounded", monospace;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
@@ -124,7 +119,7 @@ a:active {
 	text-align: left;
 	min-width: 260px;
 	margin: 14px 102px 20px 55px;
-	padding: 0px;
+	padding: 0;
 }
 
 /* .header2 { */
@@ -168,8 +163,8 @@ a:active {
 /* Basic rules */
 .accordion {
 	display: inline-block;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 .accordion_item {
@@ -191,8 +186,8 @@ a:active {
 	display: flex;
 	align-items: center;
 	/* margin: 0px 20px 0px 20px; */
-	margin: 0px;
-	padding: 18px 0px 18px 56px;
+	margin: 0;
+	padding: 18px 0 18px 56px;
 	cursor: pointer;
 	position: relative;
 }
@@ -225,7 +220,7 @@ input[class="accordion_checkbox"]:checked ~ .accordion_trigger::after {
 /* Content basic condition */
 .accordion_content {
 	background-color: #26252a;
-	max-height: 0px;
+	max-height: 0;
 	overflow: hidden;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
@@ -244,7 +239,7 @@ input[class="accordion_checkbox"]:checked ~ .accordion_content {
 .line {
 	border-top: 1px solid #26252a;
 	width: 350px;
-	margin: 0px 20px 0px 20px;
+	margin: 0 20px 0 20px;
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
@@ -269,7 +264,7 @@ input[class="accordion_checkbox"]:checked ~ .line {
 	display: grid;
 	grid-template-columns: auto 70px;
 	grid-template-rows: 38px 30px 30px;
-	margin: 0px 57px 0px 57px;
+	margin: 0 57px 0 57px;
 	gap: 20px 42px;
 	align-items: center;
 }
@@ -339,15 +334,15 @@ input[class="accordion_checkbox"]:checked ~ .line {
 }
 
 div[class*="content_label"] {
-	font-family: "Overpass Mono";
+	font-family: "Overpass Mono", monospace;
 	font-style: normal;
 	color: #ffffff;
 }
 
 p[class="content_label2"] {
 	color: #FF8AFA;;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 .input_number {
@@ -357,25 +352,24 @@ p[class="content_label2"] {
 	background-color: #37353c;
 	border: 1px solid #4657ef;
 	border-radius: 20px;
-	font-family: "Play";
+	font-family: "Play", monospace;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 19px;
 	letter-spacing: 0.04em;
 	color: #ffffff;
-	padding: 0px;
-	margin: 0px;
+	margin: 0;
 	text-align: right;
 	justify-self: right;
-	padding-right: 10px;
+	padding: 0 10px 0 0;
 	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 .input_number:focus {
 	outline: none;
 	border-width: 2px;
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 .content_grid4 input[class="input_number"] {
@@ -387,7 +381,7 @@ p[class="content_label2"] {
 .content_grid4 input[class="input_number"]:focus {
 	outline: none;
 	border-width: 2px;
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 .input_text {
@@ -400,7 +394,7 @@ p[class="content_label2"] {
 	background-color: #c0e1ff;
 	border: 1px solid #26252a;
 	border-radius: 20px;
-	font-family: "Play";
+	font-family: "Play", monospace;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
@@ -416,7 +410,7 @@ p[class="content_label2"] {
 .input_text:focus {
 	outline: none;
 	border: 2px solid #26252a;
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 
@@ -473,7 +467,7 @@ p[class="content_label2"] {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: none;
-	margin: 30px 0px 30px 0px;
+	margin: 30px 0 30px 0;
 }
 
 .btn {
@@ -514,7 +508,7 @@ p[class="content_label2"] {
 .btn:hover {
 	box-sizing: border-box;
 	border: 2px solid #26252a;
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 #order:active {
@@ -522,7 +516,7 @@ p[class="content_label2"] {
 	color: #FEDD4A;
 	box-sizing: border-box;
 	border: 2px solid #26252a;
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 #back:active {
@@ -530,7 +524,7 @@ p[class="content_label2"] {
 	color: #FFFFFF;
 	box-sizing: border-box;
 	border: 2px solid #26252a;
-	border-radius: 0px;
+	border-radius: 0;
 	width: 102px;
 	height: 45px;
 }
@@ -575,13 +569,13 @@ p[class="content_label2"] {
 .bckgrnd_top_icon {
 	margin-left: 9px;
 	margin-bottom: 23px;
-	padding: 0px;
+	padding: 0;
 }
 
 .bckgrnd_bot_icon {
 	margin-top: 45px;
 	margin-left: 115px;
-	padding: 0px;
+	padding: 0;
 	height: 52px;
 	width: 52px;
 }
@@ -589,8 +583,8 @@ p[class="content_label2"] {
 
 
 .item_wraper {
-	margin: 0px 20px 0px 20px;
-	padding: 10px 0px 10px 0px;
+	margin: 0 20px 0 20px;
+	padding: 10px 0 10px 0;
 	width: 350px;
 	height: 40px;
 	display: grid;
@@ -600,7 +594,7 @@ p[class="content_label2"] {
 }
 
 .item_wraper:hover div[class*="arrow"] {
-	border-radius: 0px;
+	border-radius: 0;
 	border-width: 2px;
 }
 
@@ -612,7 +606,7 @@ p[class="content_label2"] {
 	align-self: center;
 	justify-self: start;
 	margin-left: 36px;
-	padding: 0px;
+	padding: 0;
 	color: #26252a;
 }
 
@@ -625,7 +619,6 @@ p[class="content_label2"] {
 }
 
 div[class*="arrow"] {
-	display: block;
 	align-self: center;
 	justify-self: end;
 	width: 35px;
