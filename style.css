@@ -62,8 +62,8 @@ a:active {
 .scrollable_element {
 	position: absolute;
 	z-index: 100;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 }
 
 .cost_bckground {
@@ -76,7 +76,7 @@ a:active {
 	background-color: #ff8afa;
 	border-radius: 0 70px 70px 0;
 
-	transition: 400ms;
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 .cost_output {
@@ -88,7 +88,7 @@ a:active {
 	width: 230px;
 	height: 50px;
 
-	padding: 10px 10px 10px 100px;
+	padding: 10px 10px 10px 0;
 
 	background-color: #4657EF;
 	color: #FFFFFF;
@@ -103,19 +103,8 @@ a:active {
 	letter-spacing: 0.04em;
 	text-align: right;
 
-	/* transition: 400ms; */
 	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
-
-
-
-/* display: inline-block; */
-
-
-/* z-index: 10; */
-/* transform: translate(-50%, 0); */
-/* transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91); */
-
 
 .el-fixed .scrollable_element {
 	position: fixed;
@@ -128,7 +117,7 @@ a:active {
 	width: 160px;
 	height: 70px;
 	left: -4px;
-	border-radius: 0px 70px 70px 0px;
+	border-radius: 0 70px 70px 0;
 	border: 2px solid #26252A;
 }
 
@@ -238,7 +227,9 @@ input[class="accordion_checkbox"]:checked ~ .accordion_trigger {
 	right: 56px;
 	top: 50%;
 	margin-top: -10px;
-	transition: 0.3s;
+	/* transition: 0.3s; */
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
+
 	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: no-repeat;

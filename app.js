@@ -22,7 +22,7 @@
 // let order = document.getElementByIdlementById("order");
 // let lift_up = document.getElementByIdlementById("lift_up");
 
-
+// изменяем значение стоимости
 let cost_value = 0.07;
 var cost = document.querySelector('#cost')
 cost.textContent = cost_value;
@@ -37,23 +37,12 @@ cost.textContent = cost_value;
 // });
 
 
-// window.onscroll = function() {add_stiky()};
-//
-// var cost_container = document.getElementById("cost_container");
-// var sticky = cost_container.offsetTop;
-//
-// function add_stiky() {
-//   if (window.pageYOffset >= sticky) {
-//     cost_container.classList.add("sticky")
-//   } else {
-//     cost_container.classList.remove("sticky");
-//   }
-// }
+
 
 
 // функция добавления класса при скролле
 $(document).ready(function () {
-    const el_offset = $('#scrollable_el').offset().top; // значение отступа сверху элемента
+    // const el_offset = $('#scrollable_el').offset().top; // значение отступа сверху элемента
     $(window).scroll(function () {
         const scrolled = $(this).scrollTop(); // то, насколько мы проскроллили
         let scrollable_area = $('#scrollable_area')
