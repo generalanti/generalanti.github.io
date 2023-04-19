@@ -23,9 +23,9 @@
 // let lift_up = document.getElementByIdlementById("lift_up");
 
 // изменяем значение стоимости
-let cost_value = 0.07;
+let cost_value = 10000;
 var cost = document.querySelector('#cost')
-cost.textContent = cost_value;
+cost.textContent = cost_value + " руб";
 
 
 // accordion animation
