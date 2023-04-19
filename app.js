@@ -23,8 +23,9 @@
 // let lift_up = document.getElementByIdlementById("lift_up");
 
 
-let cost_cost = 0.07;
-document.querySelector('#cost').textContent = cost_cost;
+let cost_value = 0.07;
+var cost = document.querySelector('#cost')
+cost.textContent = cost_value;
 
 
 // accordion animation
@@ -50,54 +51,25 @@ document.querySelector('#cost').textContent = cost_cost;
 // }
 
 
-window.addEventListener(
-    "scroll",
-    () => {
-        document.body.style.setProperty(
-            "--scroll",
-            window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-        );
-    },
-    false
-);
+// функция добавления класса при скролле
+$(document).ready(function () {
+    const el_offset = $('#scrollable_el').offset().top; // значение отступа сверху элемента
+    $(window).scroll(function () {
+        const scrolled = $(this).scrollTop(); // то, насколько мы проскроллили
+        let scrollable_area = $('#scrollable_area')
+        if (scrolled > 1) {
+            // элемент прилип. добавляем класс на всю площадь скролла,
+            // так как только так можно явно задать поведение для всех
+            // элементов внутри
+            scrollable_area.addClass('el-fixed');
+        } else if (scrolled < 1) {
+            // элемент отлип. убираем класс
+            scrollable_area.removeClass('el-fixed');
 
+        }
 
-const scrollable = document.querySelector('.scrollable');
-const stickyProject = document.querySelector('.project')
-
-let current = 0;
-let target = 0;
-const ease = 0.1;
-
-function lerp(start, end, t){
-    return start * (1 - t) + end * t;
-}
-
-function init(){
-    document.body.style.height = `${scrollable.getBoundingClientRect().height}px`;
-}
-
-function smoothScroll(){
-    target = window.scrollY;
-    current = lerp(current, target, ease);
-    scrollable.style.transform = `translate3d(0, ${-current}px, 0)`;
-    sticky()
-    window.requestAnimationFrame(smoothScroll);
-}
-
-function sticky(){
-    let offset = window.innerHeight * 2;
-
-    if (current >= offset){
-        stickyProject.style.transform = `translate3d(0, ${current - offset}px, 0)`;
-    }
-}
-
-
-init()
-smoothScroll()
-
-
+    })
+});
 
 
 
