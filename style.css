@@ -276,7 +276,7 @@ input[class="accordion_checkbox"]:checked ~ .accordion_content {
 }
 
 /* Line divider accordion checkbox checked */
-input[class="accordion_checkbox"]:checked ~ .line {
+input.accordion_checkbox:checked ~ .line {
 	display: none;
 }
 
@@ -313,7 +313,7 @@ input[class="accordion_checkbox"]:checked ~ .line {
 	display: grid;
 	grid-template-columns: auto 70px;
 	grid-template-rows: 36px;
-	margin: 30px 57px 20px 57px;
+	margin: 30px 57px 30px 57px;
 	gap: 16px 32px;
 	align-items: center;
 }
@@ -376,6 +376,27 @@ p[class="content_label2"] {
 	padding: 0;
 }
 
+/* Scroll top button */
+#scrolling	{
+	display: none;
+
+	position: fixed;
+	left: 21px;
+	bottom: 30px;
+
+	width: 48px;
+	height: 48px;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("src/arrow_up.svg");
+}
+
+#scrolling:hover {
+	background-image: url("src/arrow_up_hovered.svg");
+}
+
+/* Inputs */
 .input_number {
 	width: 70px;
 	height: 30px;
