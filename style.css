@@ -390,6 +390,8 @@ p[class="content_label2"] {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url("src/arrow_up.svg");
+
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 #scrolling:hover {
@@ -533,8 +535,7 @@ p[class="content_label2"] {
 	font-weight: 700;
 	font-size: 20px;
 
-	/* transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91); */
-	transition: 0.5s;
+	transition: all 0.2s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 #back {
