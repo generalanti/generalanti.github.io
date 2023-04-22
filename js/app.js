@@ -75,7 +75,7 @@ $(document).ready(function () {
 
 // Кнопка вверх
 // Функция появления и скрытия кнопки
-$(function () {
+$(document).ready(function () {
     // при скролле больше 200 px показать кнопку, иначе скрыть
     $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {
@@ -94,7 +94,8 @@ $(function () {
 })
 
 
-
+// input_number
+// стилизация непустых числовых вводов input_number
 
 
 
