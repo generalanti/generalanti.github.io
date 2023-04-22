@@ -190,7 +190,6 @@ a:active {
 /* Accordion */
 /* Basic rules */
 .accordion {
-	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
