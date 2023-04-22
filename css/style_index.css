@@ -28,6 +28,14 @@
 	width: 52px;
 }
 
+.line {
+	border-top: 1px solid #26252a;
+	width: 350px;
+	margin: 0 20px 0 20px;
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
+
+}
+
 .item_wraper {
 	margin: 0 20px 0 20px;
 	padding: 10px 0 10px 0;
@@ -39,7 +47,7 @@
 	justify-items: center;
 }
 
-.item_wraper:hover div[class*="arrow"] {
+.item_wraper:hover .arrow {
 	border-radius: 0;
 	border-width: 2px;
 }
@@ -64,7 +72,7 @@
 	text-decoration: none;
 }
 
-div[class*="arrow"] {
+.arrow {
 	align-self: center;
 	justify-self: end;
 	width: 35px;
@@ -78,13 +86,13 @@ div[class*="arrow"] {
 	display: grid;
 	place-items: center;
 
-	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
+	transition: all 0.15s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
-.arrow_pink {
+.pink {
 	background-color: #ff8afa;
 }
 
-.arrow_green {
+.green {
 	background-color: #a9ff8a;
 }
