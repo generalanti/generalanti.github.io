@@ -293,7 +293,6 @@ p[class="content_label2"] {
 }
 
 
-
 /* Inputs */
 /* Number input */
 .input_number {
@@ -397,8 +396,6 @@ p[class="content_label2"] {
 }
 
 
-
-
 /* Adaptations (with checkbox) block basics */
 .adapt_checkbox {
 	position: absolute;
@@ -497,7 +494,6 @@ p[class="content_label2"] {
 	width: 139px;
 	height: 45px;
 }
-
 
 
 #order:active {

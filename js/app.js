@@ -97,11 +97,16 @@ $(document).ready(function () {
 // input_number
 // стилизация непустых числовых вводов input_number в темной зоне
 $(document).ready(function(){
+// применительно к классам числовых вводов
 $('.input_number.dark_bg_content').blur(function(){
-    if($.trim(this.value).length > 0) {
+    // проверяем, есть ли введенные значения
+    let input_val = $.trim(this.value)
+    if(input_val.length > 0) {
+        // если есть, то добавляем к ним класс
         $(this).addClass('input_not_empty');
     }
     else {
+        // и убираем, если значений нет
         $(this).removeClass('input_not_empty');
     }
 })
