@@ -1,0 +1,43 @@
+/* This code contains global styles for the whole project */
+
+/* Set the html and body params */
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Overpass Mono", monospace;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	color: #26252a;
+	/* color: var(--tg-theme-text-color); */
+	/* background: var(--tg-theme-bg-color); */
+	background: white;
+	/* background: #b3b0c0; */
+	max-width: 390px;
+	overscroll-behavior: none;
+}
+
+/* Remove links blue underline style */
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+/* Remove arrows in digit inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+

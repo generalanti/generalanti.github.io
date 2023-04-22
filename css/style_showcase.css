@@ -1,34 +1,4 @@
-/*
-var(--tg-theme-bg-color)
-var(--tg-theme-text-color)
-var(--tg-theme-hint-color)
-var(--tg-theme-link-color)
-var(--tg-theme-button-color)
-var(--tg-theme-button-text-color)
-*/
-
-/* Remove arrows in digit inputs */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-html, body {
-	margin: 0;
-	padding: 0;
-	font-family: "Overpass Mono", monospace;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 16px;
-	color: #26252a;
-	/* color: var(--tg-theme-text-color); */
-	/* background: var(--tg-theme-bg-color); */
-	background: white;
-	/* background: #b3b0c0; */
-	max-width: 390px;
-	overscroll-behavior: none;
-}
+@import "style.css";
 
 .img_top {
 	position: absolute;
@@ -41,23 +11,6 @@ html, body {
 .scrollable_area {
 	display: block;
 }
-
-a:link {
-	text-decoration: none;
-}
-
-a:visited {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-a:active {
-	text-decoration: none;
-}
-
 
 .scrollable_element {
 	position: absolute;
@@ -73,7 +26,7 @@ a:active {
 	width: 264px;
 	height: 149px;
 
-	background-color: #ff8afa;
+	background-color: #A9FF8A;
 	border-radius: 0 70px 70px 0;
 
 	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
@@ -147,32 +100,8 @@ a:active {
 	padding: 0;
 }
 
-/* .header2 { */
-/* 	font-family: "Overpass Mono", monospace; */
-/* 	font-style: normal; */
-/* 	font-weight: 700; */
-/* 	font-size: 16px; */
-/* 	color: #ffffff; */
-/* } */
 
-/* .header3 { */
-/* 	font-family: "Overpass Mono", monospace; */
-/* 	font-style: normal; */
-/* 	font-weight: 700; */
-/* 	font-size: 16px; */
-/* 	color: #ffffff; */
-/* } */
-
-
-/* .label { */
-/* 	font-family: "Overpass Mono", monospace; */
-/* 	font-style: normal; */
-/* 	font-weight: 700; */
-/* 	font-size: 16px; */
-/* 	color: #ffffff; */
-/* } */
-
-
+/* Content on top */
 .content_new {
 	background-color: #26252a;
 	display: inline-block;
@@ -189,7 +118,6 @@ a:active {
 .accordion_item {
 	max-width: 390px;
 }
-
 
 /* Label basic condition */
 .accordion_trigger {
@@ -225,14 +153,14 @@ a:active {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-image: url("src/accordion_folded.svg");
+	background-image: url("../src/accordion_folded.svg");
 
 	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 /* Favicon unfolded condition*/
 .accordion_item_active .accordion_trigger::after {
-	background-image: url("src/accordion_unfolded.svg");
+	background-image: url("../src/accordion_unfolded.svg");
 	transform: rotate(180deg);
 }
 
@@ -359,7 +287,7 @@ div[class*="content_label"] {
 }
 
 p[class="content_label2"] {
-	color: #FF8AFA;;
+	color: #A9FF8A;;
 	margin: 0;
 	padding: 0;
 }
@@ -377,13 +305,13 @@ p[class="content_label2"] {
 
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-image: url("src/arrow_up.svg");
+	background-image: url("../src/arrow_up.svg");
 
 	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 #scrolling:hover {
-	background-image: url("src/arrow_up_hovered.svg");
+	background-image: url("../src/arrow_up_hovered.svg");
 }
 
 /* Inputs */
@@ -505,7 +433,7 @@ p[class="content_label2"] {
 
 /* Custom checkbox hover */
 .content_label2:hover::before {
-	background-image: url('src/checkbox_focused.svg');
+	background-image: url('../src/checkbox_focused.svg');
 }
 
 
@@ -544,11 +472,6 @@ p[class="content_label2"] {
 	width: 139px;
 	height: 45px;
 }
-
-/* .btn:focus { */
-/* 	border-radius: 0px; */
-/* 	border-width: 2px; */
-/* } */
 
 .btn:hover {
 	box-sizing: border-box;
@@ -608,82 +531,4 @@ p[class="content_label2"] {
 
 .clear_all_btn:hover .clear_all_label {
 	color: #C0E1FF;
-}
-
-/* ------------------------------------ */
-
-.bckgrnd_top_icon {
-	margin-left: 9px;
-	margin-bottom: 23px;
-	padding: 0;
-}
-
-.bckgrnd_bot_icon {
-	margin-top: 45px;
-	margin-left: 115px;
-	padding: 0;
-	height: 52px;
-	width: 52px;
-}
-
-
-.item_wraper {
-	margin: 0 20px 0 20px;
-	padding: 10px 0 10px 0;
-	width: 350px;
-	height: 40px;
-	display: grid;
-	grid-template-columns: auto 50px;
-	grid-template-rows: 40px;
-	justify-items: center;
-}
-
-.item_wraper:hover div[class*="arrow"] {
-	border-radius: 0;
-	border-width: 2px;
-}
-
-.item_label {
-	font-family: "Overpass Mono", monospace;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 16px;
-	align-self: center;
-	justify-self: start;
-	margin-left: 36px;
-	padding: 0;
-	color: #26252a;
-}
-
-.item_label:link {
-	text-decoration: none;
-}
-
-.item_label:visited {
-	text-decoration: none;
-}
-
-div[class*="arrow"] {
-	align-self: center;
-	justify-self: end;
-	width: 35px;
-	height: 35px;
-	margin-right: 36px;
-	padding: 0;
-	border-color: #26252a;
-	border-radius: 50%;
-	border-width: 1px;
-	border-style: solid;
-	display: grid;
-	place-items: center;
-
-	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
-}
-
-.arrow_pink {
-	background-color: #ff8afa;
-}
-
-.arrow_green {
-	background-color: #a9ff8a;
 }
