@@ -1,5 +1,19 @@
 @import "style.css";
 
+.header1 {
+	font-family: "Unbounded", monospace;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 25px;
+	color: #26252a;
+	letter-spacing: 0.04em;
+	text-align: left;
+	min-width: 260px;
+	margin: 110px 102px 20px 55px;
+	padding: 0;
+}
+
 .bckgrnd_top_icon {
 	margin-left: 9px;
 	margin-bottom: 23px;

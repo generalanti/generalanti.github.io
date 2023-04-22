@@ -320,46 +320,51 @@ p[class="content_label2"] {
 
 .input_number:hover {
 	border-width: 2px;
+	border-style: solid;
 }
 
 .input_number:focus {
+	outline: none;
+	border-width: 2px;
+	border-style: solid;
 	border-radius: 0;
 }
 
-.input_number.dark_bg_content {
-	background-color: #37353c;
+.dark_bg_content {
+	background-color: #26252A;
 	border: 1px solid #4657ef;
 	color: #ffffff;
 }
 
-.input_number.dark_bg_content:hover {
-	border: 2px solid #FF8AFA;
+.dark_bg_content:hover {
+	border-color: #FF8AFA;
 }
 
-.input_number.dark_bg_content:focus {
-	outline: none;
-	border: 2px solid #FF8AFA;
+.dark_bg_content:focus {
+	border-color: #FF8AFA;
 }
 
-.input_number.light_bg_content {
+.light_bg_content {
 	background-color: #c0e1ff;
 	border: 1px solid #26252a;
 	color: #26252a;
 }
 
-.input_number.light_bg_content:hover {
-	border: 2px solid;
+.light_bg_content:hover {
+	border-color: #4657ef;
 }
 
-.input_number.light_bg_content:focus {
-	outline: none;
-	border: 2px solid;
+.light_bg_content:focus {
+	border-color: #4657ef;
 }
 
 /* Custom class for number inputs in dark area which are not empty */
-.input_number.input_not_empty {
-	/* border: 1px solid #FF8AFA; */
-	border: 1px solid #FF8AFA;
+.dark_bg_content.input_not_empty {
+	border-color: #FF8AFA;
+}
+
+.light_bg_content.input_not_empty {
+	border-color: #4657ef;
 }
 
 /* Text input */
