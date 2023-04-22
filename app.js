@@ -29,10 +29,26 @@ cost.textContent = cost_value + "₽";
 
 
 
-// accordion animation
+// функция анимации аккордеона
 $(document).ready(function() {
+    // работаем по событию клик по триггеру
 	$('.accordion_trigger').click(function() {
-		$(this).parent().toggleClass('accordion_item_active');
+        // если аккордеон развернут, то сворачиваем
+        if ($(this).parent().hasClass( 'accordion_item_active' )) {
+            $(this).parent().removeClass('accordion_item_active')
+        }
+        // если свернут, то разворачиваем и скроллим всю страницу к началу триггера
+        else {
+            $(this).parent().addClass('accordion_item_active');
+            // скроллим к позиции триггера + вниз на n пикселей, чтобы стоимость
+            // не перекрывала лэйбл триггера
+            setTimeout(() => {
+                $('body, html').animate({
+                    scrollTop: $(this).offset().top - 92
+                }, 500)
+            }, 400)
+        }
+
 	});
 });
 
