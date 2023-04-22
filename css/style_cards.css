@@ -447,6 +447,8 @@ p[class="content_label2"] {
 	margin: 30px 0 30px 0;
 }
 
+
+/* Buttons */
 .btn {
 	display: inline-block;
 	color: #26252a;
@@ -458,6 +460,16 @@ p[class="content_label2"] {
 	font-size: 20px;
 
 	transition: all 0.2s cubic-bezier(0.93, 0.1, 0.42, 0.91);
+}
+
+.btn:hover {
+	border: 2px solid;
+}
+
+.btn:focus {
+	box-sizing: border-box;
+	border: 2px solid #26252a;
+	border-radius: 0;
 }
 
 #back {
@@ -476,11 +488,7 @@ p[class="content_label2"] {
 	height: 45px;
 }
 
-.btn:hover {
-	box-sizing: border-box;
-	border: 2px solid #26252a;
-	border-radius: 0;
-}
+
 
 #order:active {
 	background: #26252a;
