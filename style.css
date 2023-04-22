@@ -164,7 +164,6 @@ a:active {
 /* } */
 
 
-
 /* .label { */
 /* 	font-family: "Overpass Mono", monospace; */
 /* 	font-style: normal; */
@@ -178,13 +177,6 @@ a:active {
 	background-color: #26252a;
 	display: inline-block;
 }
-
-
-
-
-
-
-
 
 
 /* Accordion */
@@ -251,7 +243,7 @@ a:active {
 
 	background-color: #26252a;
 
-	transition: all 0.4s cubic-bezier( 0.88, 0.61, 0.3, 0.86 );
+	transition: all 0.4s cubic-bezier(0.88, 0.61, 0.3, 0.86);
 
 }
 
@@ -373,7 +365,7 @@ p[class="content_label2"] {
 }
 
 /* Scroll top button */
-#scrolling	{
+#scrolling {
 	display: none;
 
 	position: fixed;

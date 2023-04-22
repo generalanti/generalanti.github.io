@@ -28,13 +28,12 @@ var cost = document.querySelector('#cost')
 cost.textContent = cost_value + "₽";
 
 
-
 // функция анимации аккордеона
-$(document).ready(function() {
+$(document).ready(function () {
     // работаем по событию клик по триггеру
-	$('.accordion_trigger').click(function() {
+    $('.accordion_trigger').click(function () {
         // если аккордеон развернут, то сворачиваем
-        if ($(this).parent().hasClass( 'accordion_item_active' )) {
+        if ($(this).parent().hasClass('accordion_item_active')) {
             $(this).parent().removeClass('accordion_item_active')
         }
         // если свернут, то разворачиваем и скроллим всю страницу к началу триггера
@@ -49,11 +48,8 @@ $(document).ready(function() {
             }, 400)
         }
 
-	});
+    });
 });
-
-
-
 
 
 // функция добавления класса при скролле
@@ -79,31 +75,23 @@ $(document).ready(function () {
 
 // Кнопка вверх
 // Функция появления и скрытия кнопки
-$(function(){
+$(function () {
     // при скролле больше 200 px показать кнопку, иначе скрыть
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {
             $('#scrolling').fadeIn();
-        }
-        else {
+        } else {
             $('#scrolling').fadeOut(400);
         }
     })
     // функция плавного скролла вверх
-    $('#scrolling').click(function() {
+    $('#scrolling').click(function () {
         $('body, html').animate({
             scrollTop: 0
         }, 550);
         return false;
     })
 })
-
-
-
-
-
-
-
 
 
 // btn1.addEventListener("click", function(){
@@ -116,7 +104,6 @@ $(function(){
 // 		tg.MainButton.show();
 // 	}
 // });
-
 
 
 // Telegram.WebApp.onEvent("mainButtonClicked", function(){
