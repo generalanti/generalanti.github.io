@@ -69,7 +69,7 @@ $(document).ready(function () {
 
         }
 
-    })
+    });
 });
 
 
@@ -83,26 +83,29 @@ $(document).ready(function () {
         } else {
             $('#scrolling').fadeOut(400);
         }
-    })
+    });
     // функция плавного скролла вверх
     $('#scrolling').click(function () {
         $('body, html').animate({
             scrollTop: 0
         }, 550);
         return false;
-    })
-})
+    });
+});
 
 
 // input_number
-// стилизация непустых числовых вводов input_number
-
-
-
-
-
-
-
+// стилизация непустых числовых вводов input_number в темной зоне
+$(document).ready(function(){
+$('.input_number.dark_bg_content').blur(function(){
+    if($.trim(this.value).length > 0) {
+        $(this).addClass('input_not_empty');
+    }
+    else {
+        $(this).removeClass('input_not_empty');
+    }
+})
+});
 
 
 

@@ -295,6 +295,7 @@ p[class="content_label2"] {
 
 
 /* Inputs */
+/* Number input */
 .input_number {
 	width: 70px;
 	height: 30px;
@@ -356,6 +357,13 @@ p[class="content_label2"] {
 	border: 2px solid;
 }
 
+/* Custom class for number inputs in dark area which are not empty */
+.input_number.input_not_empty {
+	/* border: 1px solid #FF8AFA; */
+	border: 1px solid #FF8AFA;
+}
+
+/* Text input */
 .input_text {
 	display: inline;
 	position: relative;
@@ -387,6 +395,8 @@ p[class="content_label2"] {
 	border: 2px solid;
 	border-radius: 0;
 }
+
+
 
 
 /* Adaptations (with checkbox) block basics */
