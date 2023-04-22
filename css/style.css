@@ -13,6 +13,7 @@ html, body {
 	/* background: var(--tg-theme-bg-color); */
 	background: white;
 	/* background: #b3b0c0; */
+	width: 100%;
 	max-width: 390px;
 	overscroll-behavior: none;
 }
