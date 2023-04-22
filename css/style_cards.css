@@ -391,15 +391,18 @@ p[class="content_label2"] {
 }
 
 .input_text:hover {
-	border: 2px solid;
+	border: 2px solid #4657ef;
 }
 
 .input_text:focus {
 	outline: none;
-	border: 2px solid;
+	border: 2px solid #4657ef;
 	border-radius: 0;
 }
 
+.input_text.input_not_empty {
+	border-color: #4657ef;
+}
 
 /* Adaptations (with checkbox) block basics */
 .adapt_checkbox {
