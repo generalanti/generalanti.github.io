@@ -30,11 +30,11 @@ cost.textContent = cost_value + "₽";
 
 
 // accordion animation
-// $(document).ready(function() {
-// 	$('.accordion_trigger').click(function() {
-// 		$(this).next('.accordion_content').slideToggle(200);
-// 	});
-// });
+$(document).ready(function() {
+	$('.accordion_trigger').click(function() {
+		$(this).parent().toggleClass('accordion_item_active');
+	});
+});
 
 
 

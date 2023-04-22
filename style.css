@@ -180,8 +180,14 @@ a:active {
 }
 
 
-/* Accordion */
 
+
+
+
+
+
+
+/* Accordion */
 /* Basic rules */
 .accordion {
 	display: inline-block;
@@ -190,15 +196,9 @@ a:active {
 }
 
 .accordion_item {
-	position: relative;
 	max-width: 390px;
 }
 
-.accordion_item > input[type="checkbox"] {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-}
 
 /* Label basic condition */
 .accordion_trigger {
@@ -208,15 +208,15 @@ a:active {
 	display: -o-flex;
 	display: flex;
 	align-items: center;
-	/* margin: 0px 20px 0px 20px; */
+
 	margin: 0;
 	padding: 18px 0 18px 56px;
+
 	cursor: pointer;
-	position: relative;
 }
 
-/* Label checked condition*/
-input[class="accordion_checkbox"]:checked ~ .accordion_trigger {
+/* Label unfolded condition*/
+.accordion_item_active .accordion_trigger {
 	color: #4657EF;
 }
 
@@ -224,59 +224,56 @@ input[class="accordion_checkbox"]:checked ~ .accordion_trigger {
 .accordion_trigger::after {
 	content: '';
 	display: inline-block;
+	position: absolute;
+	left: 314px;
+
 	width: 20px;
 	height: 20px;
-	position: absolute;
-	right: 56px;
-	top: 50%;
-	margin-top: -10px;
-	/* transition: 0.3s; */
-	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 
 	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url("src/accordion_folded.svg");
+
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
-/* Favicon checked condition*/
-input[class="accordion_checkbox"]:checked ~ .accordion_trigger::after {
-	transform: rotate(180deg);
+/* Favicon unfolded condition*/
+.accordion_item_active .accordion_trigger::after {
 	background-image: url("src/accordion_unfolded.svg");
+	transform: rotate(180deg);
 }
 
 /* Content basic condition */
 .accordion_content {
-	background-color: #26252a;
-	max-height: 0;
 	overflow: hidden;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
+	max-height: 0;
+
+	background-color: #26252a;
+
+	transition: all 0.4s cubic-bezier( 0.88, 0.61, 0.3, 0.86 );
+
 }
 
 /* Content unfolded condition*/
-input[class="accordion_checkbox"]:checked ~ .accordion_content {
+.accordion_item_active .accordion_content {
 	max-height: 2500px;
-	-webkit-transition: 4s;
-	-o-transition: 4s;
-	transition: 4s;
-}
+	transition: all 1s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 
+}
 
 /* Line divider */
 .line {
 	border-top: 1px solid #26252a;
 	width: 350px;
 	margin: 0 20px 0 20px;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	transition: 0.3s;
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
+
 }
 
-/* Line divider accordion checkbox checked */
-input.accordion_checkbox:checked ~ .line {
+/* Line divider unfolded condition */
+.accordion_item_active .line {
 	display: none;
 }
 
@@ -417,6 +414,7 @@ p[class="content_label2"] {
 	text-align: right;
 	justify-self: right;
 	padding: 0 10px 0 0;
+
 	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
@@ -456,6 +454,7 @@ p[class="content_label2"] {
 	letter-spacing: 0.04em;
 	text-align: right;
 	padding-right: 10px;
+
 	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 
 	/* align-self: end; */
@@ -500,11 +499,12 @@ p[class="content_label2"] {
 	height: 20px;
 	flex-shrink: 0;
 	flex-grow: 0;
-	transition: 0.3s;
 	margin-right: 0.5em;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url('/src/checkbox_unchecked.svg');
+
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 /* Custom checkbox checked */
