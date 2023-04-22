@@ -428,12 +428,12 @@ p[class="content_label2"] {
 
 /* Custom checkbox checked */
 .adapt_checkbox:checked + .content_label2::before {
-	background-image: url('/src/checkbox_checked.svg');
+	background-image: url('/src/checkbox_checked_p.svg');
 }
 
 /* Custom checkbox hover */
 .content_label2:hover::before {
-	background-image: url('../src/checkbox_focused.svg');
+	background-image: url('../src/checkbox_focused_p.svg');
 }
 
 
