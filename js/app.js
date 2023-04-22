@@ -94,6 +94,20 @@ $(function () {
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // btn1.addEventListener("click", function(){
 // 	if (tg.MainButton.isVisible) {
 // 		tg.MainButton.hide();
