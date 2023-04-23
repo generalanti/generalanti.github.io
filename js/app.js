@@ -101,6 +101,12 @@ $('.input_number, .input_text').blur(function(){
 });
 
 
+// валидация числовых инпутов - можно вводить только числа
+$('body').on('input', '.input_number', function(){
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
+
+
 
 
 // $(document).ready(function () {
