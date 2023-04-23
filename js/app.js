@@ -101,6 +101,8 @@ $('.input_number, .input_text').blur(function(){
 });
 
 
+
+
 // $(document).ready(function () {
 //     $('#promocode').keydown(function () {
 //         $(this).val($(this).val().toUpperCase());

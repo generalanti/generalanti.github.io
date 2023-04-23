@@ -36,6 +36,7 @@
                         type="number"
                         class="input_number dark_bg_content"
                         id="slides_new"
+
                         min="1"
                         max="999"
                 />
@@ -53,6 +54,7 @@
                         type="number"
                         class="input_number dark_bg_content"
                         id="clippings_normal_new"
+
                         min="1"
                         max="999"
                 />
@@ -64,6 +66,7 @@
                         type="number"
                         class="input_number dark_bg_content"
                         id="clippings_hard_new"
+
                         min="1"
                         max="999"
                 />
@@ -94,6 +97,7 @@
                                     type="number"
                                     class="input_number dark_bg_content"
                                     id="slides_exist"
+
                                     min="1"
                                     max="999"
                             />
@@ -111,6 +115,7 @@
                                     type="number"
                                     class="input_number dark_bg_content"
                                     id="clippings_normal_exist"
+
                                     min="1"
                                     max="999"
                             />
@@ -122,6 +127,7 @@
                                     type="number"
                                     class="input_number dark_bg_content"
                                     id="clippings_hard_exist"
+
                                     min="1"
                                     max="999"
                             />
@@ -150,9 +156,13 @@
                                 Количество слайдов с инфографикой
                             </div>
                             <input
-                                    type="number"
+                                    type="text"
+                                    inputmode="numeric"
+                                    pattern="[0-9]*"
+                                    maxlength="4"
                                     class="input_number dark_bg_content"
                                     id="adaptations_other"
+
                                     min="1"
                                     max="999"
                             />
@@ -173,7 +183,9 @@
                     type="text"
                     class="input_text"
                     id="name"
+                    required
                     autocomplete="off"
+                    maxlength="15"
                     readonly
                     onfocus="this.removeAttribute('readonly')"
             />
@@ -182,12 +194,14 @@
                     type="text"
                     class="input_text"
                     id="last_name"
+                    required
                     autocomplete="off"
+                    maxlength="20"
                     readonly
                     onfocus="this.removeAttribute('readonly')"
             />
-<!--            <div class="content_label2">Телефон*</div>-->
-<!--            <input type="number" class="input_text" id="telephone"/>-->
+            <!--            <div class="content_label2">Телефон*</div>-->
+            <!--            <input type="number" class="input_text" id="telephone"/>-->
 
         </div>
         <div class="line"></div>
@@ -200,6 +214,7 @@
                     class="input_text"
                     id="promocode"
                     autocomplete="off"
+                    maxlength="14"
                     readonly
                     onfocus="this.removeAttribute('readonly')"
             />
