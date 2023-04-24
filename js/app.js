@@ -81,7 +81,6 @@ $(document).ready(function () {
     });
 });
 
-
 // input_number
 // стилизация непустых числовых вводов input_number в темной зоне
 $(document).ready(function(){
@@ -100,21 +99,54 @@ $('.input_number, .input_text').blur(function(){
 })
 });
 
+// функция добавления "%" при вводе числа скидки
+$(document).ready(function(){
+    $('#discount').on('input', function() {
+        $(this).val(function(i, v) {
+            return v.replace('%','') + '%';  });
+    });
+});
 
-// валидация числовых инпутов - можно вводить только числа
-$('body').on('input', '.input_number', function(){
+// $(document).ready(function(){
+// // применительно к классам числовых вводов
+//     $('#discount').keyup(function(){
+//         // проверяем, есть ли введенные значения
+//         let input_val = $.trim(this.value)
+//         if(input_val.length > 0) {
+//             // если есть, то добавляем к ним класс
+//             $(this).val($(this).val() + "%");
+//         }
+//         else {
+//             // и убираем, если значений нет
+//             $(this).val($(this).val() - "%");
+//         }
+//     })
+// });
+
+
+// валидация числовых инпутов на темном фоне - можно вводить только числа
+$('body').on('input', '.input_number.dark_bg_content', function(){
     this.value = this.value.replace(/[^0-9]/g, '');
+});
+
+// валидация числовых инпутов на светлом фоне - можно вводить только числа
+$('body').on('input', '.input_number.light_bg_content', function(){
+    this.value = this.value.replace(/[^0-9%]/g, '');
 });
 
 
 
 
-// $(document).ready(function () {
-//     $('#promocode').keydown(function () {
-//         $(this).val($(this).val().toUpperCase());
+//
+// $(function() {
+//     $('#discount').on('keyup', function(e) {
+//         var val = $(this).val();
+//         if (val.length > 3) {
+//             $(this).val(val.replace(/\B(?=(\d{2})+(?!\d))/g, "/"));
+//         }
+//         return true;
 //     });
 // });
-
 
 // btn1.addEventListener("click", function(){
 // 	if (tg.MainButton.isVisible) {
