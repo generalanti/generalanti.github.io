@@ -140,17 +140,17 @@ $('body').on('input', '.input_number.light_bg_content', function () {
     this.value = this.value.replace(/[^0-9%]/g, '');
 });
 
+// валидация текстовых инпутов имени и фамилии
+$('body').on('input', '#name, #last_name', function () {
+    this.value = this.value.replace(/[^a-zA-Zа-яА-Я]/g, '');
+});
 
-//
-// $(function() {
-//     $('#discount').on('keyup', function(e) {
-//         var val = $(this).val();
-//         if (val.length > 3) {
-//             $(this).val(val.replace(/\B(?=(\d{2})+(?!\d))/g, "/"));
-//         }
-//         return true;
-//     });
-// });
+// валидация текстового инпута промокода
+$('body').on('input', '#promocode', function () {
+    this.value = this.value.replace(/[^0-9a-zA-Zа-яА-Я]/g, '');
+});
+
+
 
 // btn1.addEventListener("click", function(){
 // 	if (tg.MainButton.isVisible) {
