@@ -312,7 +312,6 @@ p[class="content_label2"] {
 	line-height: 19px;
 	letter-spacing: 0.04em;
 	text-align: right;
-
 	justify-self: right;
 
 	transition: all 0.15s cubic-bezier(0.93, 0.1, 0.42, 0.91);

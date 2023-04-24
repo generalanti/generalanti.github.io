@@ -83,58 +83,51 @@ $(document).ready(function () {
 
 // input_number
 // стилизация непустых числовых вводов input_number в темной зоне
-$(document).ready(function(){
+$(document).ready(function () {
 // применительно к классам числовых вводов
-$('.input_number, .input_text').blur(function(){
-    // проверяем, есть ли введенные значения
-    let input_val = $.trim(this.value)
-    if(input_val.length > 0) {
-        // если есть, то добавляем к ним класс
-        $(this).addClass('input_not_empty');
-    }
-    else {
-        // и убираем, если значений нет
-        $(this).removeClass('input_not_empty');
-    }
-})
+    $('.input_number, .input_text').blur(function () {
+        // проверяем, есть ли введенные значения
+        let input_val = $.trim(this.value)
+        if (input_val.length > 0) {
+            // если есть, то добавляем к ним класс
+            $(this).addClass('input_not_empty');
+        } else {
+            // и убираем, если значений нет
+            $(this).removeClass('input_not_empty');
+        }
+    })
 });
 
-// функция добавления "%" при вводе числа скидки
-$(document).ready(function(){
-    $('#discount').on('input', function() {
-        $(this).val(function(i, v) {
-            return v.replace('%','') + '%';  });
+// функция добавления "%" при вводе числа скидки (и удалении "%" если цифр нет)
+$(document).ready(function () {
+    let discount = $('#discount')
+    discount.change(function () {
+        let input_val = $.trim(this.value)
+        if (input_val.length > 0) {
+            $(this).val(function (index, old) {
+                return old.replace(/[^0-9]/g, '') + '%';
+            });
+        }
+    });
+    discount.blur(function () {
+        let input_val = $.trim(this.value)
+        if (input_val === '%') {
+            $(this).val(function (index, old) {
+                return old.replace('%', '');
+            });
+        }
     });
 });
 
-// $(document).ready(function(){
-// // применительно к классам числовых вводов
-//     $('#discount').keyup(function(){
-//         // проверяем, есть ли введенные значения
-//         let input_val = $.trim(this.value)
-//         if(input_val.length > 0) {
-//             // если есть, то добавляем к ним класс
-//             $(this).val($(this).val() + "%");
-//         }
-//         else {
-//             // и убираем, если значений нет
-//             $(this).val($(this).val() - "%");
-//         }
-//     })
-// });
-
-
 // валидация числовых инпутов на темном фоне - можно вводить только числа
-$('body').on('input', '.input_number.dark_bg_content', function(){
+$('body').on('input', '.input_number.dark_bg_content', function () {
     this.value = this.value.replace(/[^0-9]/g, '');
 });
 
 // валидация числовых инпутов на светлом фоне - можно вводить только числа
-$('body').on('input', '.input_number.light_bg_content', function(){
+$('body').on('input', '.input_number.light_bg_content', function () {
     this.value = this.value.replace(/[^0-9%]/g, '');
 });
-
-
 
 
 //
