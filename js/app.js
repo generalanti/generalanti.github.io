@@ -123,11 +123,10 @@ $(document).ready(function () {
 // функция стирания данных из инпутов расчета
 $(document).ready(function () {
     $('#clear_all').click(function () {
-        $('.input_number, #promocode').val('')
+        $('.input_number, #promocode').val('');
+        $('input[type="checkbox"]').prop( "checked", false )
     });
 });
-
-
 
 
 // валидация числовых инпутов на темном фоне - можно вводить только числа
@@ -149,7 +148,6 @@ $('body').on('input', '#name, #last_name', function () {
 $('body').on('input', '#promocode', function () {
     this.value = this.value.replace(/[^0-9a-zA-Zа-яА-Я]/g, '');
 });
-
 
 
 // btn1.addEventListener("click", function(){
