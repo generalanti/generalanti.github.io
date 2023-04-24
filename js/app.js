@@ -119,6 +119,17 @@ $(document).ready(function () {
     });
 });
 
+
+// функция стирания данных из инпутов расчета
+$(document).ready(function () {
+    $('#clear_all').click(function () {
+        $('.input_number, #promocode').val('')
+    });
+});
+
+
+
+
 // валидация числовых инпутов на темном фоне - можно вводить только числа
 $('body').on('input', '.input_number.dark_bg_content', function () {
     this.value = this.value.replace(/[^0-9]/g, '');
