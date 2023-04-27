@@ -293,8 +293,8 @@ p[class="content_label2"] {
 }
 
 
-
 /* Inputs */
+/* Number input */
 .input_number {
 	width: 70px;
 	height: 30px;
@@ -312,7 +312,6 @@ p[class="content_label2"] {
 	line-height: 19px;
 	letter-spacing: 0.04em;
 	text-align: right;
-
 	justify-self: right;
 
 	transition: all 0.15s cubic-bezier(0.93, 0.1, 0.42, 0.91);
@@ -320,42 +319,54 @@ p[class="content_label2"] {
 
 .input_number:hover {
 	border-width: 2px;
+	border-style: solid;
 }
 
 .input_number:focus {
+	outline: none;
+	border-width: 2px;
+	border-style: solid;
 	border-radius: 0;
 }
 
-.input_number.dark_bg_content {
-	background-color: #37353c;
+.dark_bg_content {
+	background-color: #26252A;
 	border: 1px solid #4657ef;
 	color: #ffffff;
 }
 
-.input_number.dark_bg_content:hover {
-	border: 2px solid #A9FF8A;
+.dark_bg_content:hover {
+	border-color: #A9FF8A;
 }
 
-.input_number.dark_bg_content:focus {
-	outline: none;
-	border: 2px solid #A9FF8A;
+.dark_bg_content:focus {
+	border-color: #A9FF8A;
 }
 
-.input_number.light_bg_content {
+.light_bg_content {
 	background-color: #c0e1ff;
 	border: 1px solid #26252a;
 	color: #26252a;
 }
 
-.input_number.light_bg_content:hover {
-	border: 2px solid;
+.light_bg_content:hover {
+	border-color: #4657ef;
 }
 
-.input_number.light_bg_content:focus {
-	outline: none;
-	border: 2px solid;
+.light_bg_content:focus {
+	border-color: #4657ef;
 }
 
+/* Custom class for number inputs in dark area which are not empty */
+.dark_bg_content.input_not_empty {
+	border-color: #A9FF8A;
+}
+
+.light_bg_content.input_not_empty {
+	border-color: #4657ef;
+}
+
+/* Text input */
 .input_text {
 	display: inline;
 	position: relative;
@@ -379,15 +390,18 @@ p[class="content_label2"] {
 }
 
 .input_text:hover {
-	border: 2px solid;
+	border: 2px solid #4657ef;
 }
 
 .input_text:focus {
 	outline: none;
-	border: 2px solid;
+	border: 2px solid #4657ef;
 	border-radius: 0;
 }
 
+.input_text.input_not_empty {
+	border-color: #4657ef;
+}
 
 /* Adaptations (with checkbox) block basics */
 .adapt_checkbox {
@@ -447,6 +461,7 @@ p[class="content_label2"] {
 	margin: 30px 0 30px 0;
 }
 
+
 /* Buttons */
 .btn {
 	display: inline-block;
@@ -486,7 +501,6 @@ p[class="content_label2"] {
 	width: 139px;
 	height: 45px;
 }
-
 
 
 #order:active {
