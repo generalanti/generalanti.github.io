@@ -124,6 +124,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#clear_all').click(function () {
         $('.input_number, #promocode').val('');
+        $('.input_number, .input_text').removeClass('input_not_empty');
         $('input[type="checkbox"]').prop( "checked", false )
     });
 });
