@@ -201,9 +201,9 @@
 .content_grid1 {
 	display: grid;
 	grid-template-columns: auto 70px;
-	grid-template-rows: 36px;
+	grid-template-rows: 30px;
 	margin: 30px 57px 30px 57px;
-	column-gap: 42px;
+	gap: 20px 42px;
 	align-items: center;
 }
 
@@ -219,9 +219,9 @@
 .content_grid3 {
 	display: grid;
 	grid-template-columns: auto 70px;
-	grid-template-rows: 36px;
+	grid-template-rows: 30px;
 	margin: 36px 57px 29px 57px;
-	gap: 16px 25px;
+	gap: 20px 42px;
 	align-items: center;
 }
 
@@ -248,8 +248,8 @@
 .content_grid3 p {
 	grid-column-start: 1;
 	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
 }
 
 .content_label1 {
