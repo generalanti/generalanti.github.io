@@ -9,10 +9,11 @@ tg.expand();
 // let cost = document.getElementByIdlementById("cost");
 
 
+
 // изменяем значение стоимости
 let cost_value = 1000000;
 var cost = document.querySelector('#cost')
-cost.textContent = cost_value + "₽";
+cost.textContent = tg.initData + "₽";
 
 
 // функция анимации аккордеона
