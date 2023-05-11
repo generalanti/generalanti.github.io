@@ -8,12 +8,12 @@ tg.expand();
 
 // let cost = document.getElementByIdlementById("cost");
 
-const { first_name, last_name, username } = window.Telegram.WebApp.initDataUnsafe.user;
+
 
 // изменяем значение стоимости
 // let cost_value = 1000000;
 var cost = document.querySelector('#cost');
-cost.textContent = `${first_name} ${last_name} ${username}`;
+cost.textContent = tg.initDataUnsafe.user;
     // "₽";
 
 
