@@ -13,7 +13,7 @@ tg.expand();
 // изменяем значение стоимости
 // let cost_value = 1000000;
 var cost = document.querySelector('#cost');
-cost.textContent = tg.initDataUnsafe.user.id;
+cost.textContent = tg.initDataUnsafe.user.username;
     // "₽";
 
 
