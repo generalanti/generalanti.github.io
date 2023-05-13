@@ -463,11 +463,21 @@ p[class="content_label2"] {
 /* Custom checkbox disabled unchecked */
 .adapt_checkbox:disabled:not(:checked) + .content_label2::before {
 	background-image: url('/src/checkbox_unchecked_disabled.svg');
+	cursor: not-allowed;
+}
+
+.adapt_checkbox:disabled:not(:checked) + .content_label2 {
+	cursor: not-allowed;
 }
 
 /* Custom checkbox disabled checked */
 .adapt_checkbox:disabled:checked + .content_label2::before {
 	background-image: url('/src/checkbox_checked_disabled_p.svg');
+	cursor: not-allowed;
+}
+
+.adapt_checkbox:disabled:checked + .content_label2 {
+	cursor: not-allowed;
 }
 
 
