@@ -115,10 +115,10 @@ $('#adaptations_other').on("input", function () {
 // DISCOUNT
 function discount_multiplier() {
     let discount_val = $('#discount').val()
-    if (discount_val) {
+    // проверка, что введено именно число. если ввести букву, то может быть NaN
+    if (discount_val > 0) {
         discounted_fraction = 1 - (discount_val / 100)
-    }
-    else {
+    } else {
         discounted_fraction = 1.00
     }
 }
@@ -144,7 +144,8 @@ function calculate_cost() {
                 cost_clippings_hard_exist +
                 cost_adaptations_exist +
                 cost_adaptations_other))
-
+    console.log(discounted_fraction)
+    console.log($('#discount').val())
     $('#cost').text(total_cost + "₽")
 }
 
