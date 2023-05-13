@@ -185,18 +185,14 @@ $('#slides_new').on("input", function () {
     if (this.value > 1) {
         $('#alarm_new').css({"visibility": "hidden"})
         cost_slides_new = (this.value - 1) * price_slide_new + price_cover_new
-        calculate_cost()
     } else if (!$(this).val()) {
         $('#alarm_new').css({"visibility": "hidden"})
         cost_slides_new = 0
-        calculate_cost()
-        console.log(cost_slides_new)
     } else {
         $('#alarm_new').css({"visibility": "visible"})
         cost_slides_new = 0
-        calculate_cost()
     }
-
+    calculate_cost()
 })
 
 $('#clippings_normal_new').on("input", function () {
@@ -212,10 +208,11 @@ $('#clippings_hard_new').on("input", function () {
 $('#adaptations_new').change(function () {
     if (this.checked) {
         cost_adaptations_new = $('#slides_new').value * price_adaptation
-        calculate_cost()
     } else {
         cost_adaptations_new = 0
+
     }
+    calculate_cost()
 })
 
 // EXIST
@@ -237,10 +234,10 @@ $('#clippings_hard_exist').on("input", function () {
 $('#adaptations_exist').change(function () {
     if (this.checked) {
         cost_adaptations_exist = $('#slides_exist').value * price_adaptation
-        calculate_cost()
     } else {
         cost_adaptations_exist = 0
     }
+    calculate_cost()
 })
 
 // ADAPTATIONS OTHER
@@ -261,7 +258,6 @@ function calculate_cost() {
         cost_clippings_hard_exist +
         cost_adaptations_exist +
         cost_adaptations_other
-    console.log("total cost = " + total_cost)
     $('#cost').text(total_cost)
 }
 
