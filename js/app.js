@@ -39,7 +39,7 @@ var discounted_fraction = 1.00
 
 var total_cost = 0
 
-// обнуляем cost
+// обнуляем cost при открытии страницы
 $(document).ready(function () {
     $('#cost').text(total_cost + "₽")
 });
