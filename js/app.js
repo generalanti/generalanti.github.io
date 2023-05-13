@@ -276,7 +276,6 @@ $(document).ready(function () {
         $('.input_number, .input_text').removeClass('input_not_empty');
         $('input[type="checkbox"]').prop("checked", false)
         disable_checkbox($('#slides_new'), $('#adaptations_new'))
-        disable_checkbox($('#slides_exist'), $('#adaptations_exist'))
         scroll_up()
     });
 });
@@ -295,9 +294,6 @@ $('#slides_new').on("input", function () {
     disable_checkbox($('#slides_new'), $('#adaptations_new'))
 })
 
-$('#slides_exist').on("input", function () {
-    disable_checkbox($('#slides_exist'), $('#adaptations_exist'))
-})
 
 
 // валидация числовых инпутов на темном фоне - можно вводить только числа
