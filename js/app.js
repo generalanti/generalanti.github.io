@@ -13,8 +13,6 @@ try {
 
 }
 
-// "₽";
-
 
 // Калькулятор цен
 
@@ -118,8 +116,7 @@ $('#adaptations_other').on("input", function () {
 function discount_multiplier() {
     let discount_val = $('#discount').val()
     if (discount_val) {
-        // discount_val.replace(/[%]/gi, '');
-        discounted_fraction = 1 - (parseInt(discount_val)) / 100
+        discounted_fraction = 1 - (discount_val / 100)
     }
     else {
         discounted_fraction = 1.00
