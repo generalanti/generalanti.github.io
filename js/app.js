@@ -16,10 +16,6 @@ try {
 // "₽";
 
 
-
-
-
-
 // Калькулятор цен
 
 // для тестов записал пока что эти цены. В будущем они будут тянуться из БД
@@ -41,13 +37,17 @@ var cost_clippings_normal_exist = 0
 var cost_clippings_hard_exist = 0
 var cost_adaptations_exist = 0
 var cost_adaptations_other = 0
+var discounted_fraction = 1.00
 
 var total_cost = 0
-$('#cost').text(total_cost)
-console.log($('#cost').textContent)
-// $('#cost').textContent = ToString(0)
 
-// events
+// обнуляем cost
+$(document).ready(function () {
+    $('#cost').text(total_cost + "₽")
+});
+
+
+// События ввода в числовые инпуты и переключения чекбоксов
 
 // NEW
 $('#slides_new').on("input", function () {
@@ -114,20 +114,43 @@ $('#adaptations_other').on("input", function () {
     calculate_cost()
 })
 
+// DISCOUNT
+function discount_multiplier() {
+    let discount_val = $('#discount').val()
+    if (discount_val) {
+        // discount_val.replace(/[%]/gi, '');
+        discounted_fraction = 1 - (parseInt(discount_val)) / 100
+    }
+    else {
+        discounted_fraction = 1.00
+    }
+}
 
+$('#discount').on("input", function () {
+    discount_multiplier()
+    calculate_cost()
+});
+
+
+// расчет полной стоимости и вывод на экран
 function calculate_cost() {
     total_cost =
-        cost_slides_new +
-        cost_clippings_normal_new +
-        cost_clippings_hard_new +
-        cost_adaptations_new +
-        cost_slides_exist +
-        cost_clippings_normal_exist +
-        cost_clippings_hard_exist +
-        cost_adaptations_exist +
-        cost_adaptations_other
-    $('#cost').text(total_cost)
+        // округляем в большую сторону
+        Math.ceil(
+            discounted_fraction * (
+                cost_slides_new +
+                cost_clippings_normal_new +
+                cost_clippings_hard_new +
+                cost_adaptations_new +
+                cost_slides_exist +
+                cost_clippings_normal_exist +
+                cost_clippings_hard_exist +
+                cost_adaptations_exist +
+                cost_adaptations_other))
+
+    $('#cost').text(total_cost + "₽")
 }
+
 
 // функция анимации аккордеона
 $(document).ready(function () {
@@ -217,35 +240,35 @@ $(document).ready(function () {
 });
 
 // функция добавления "%" при вводе числа скидки (и удалении "%" если цифр нет)
-$(document).ready(function () {
-    let discount = $('#discount')
-    discount.on("input", function () {
-        // let input_val = this.value
-        if (this.value.length > 0) {
-            $(this).val(function (index, old) {
-                return old.replace(/[^0-9]/g, '') + '%';
-            });
-        }
-    });
-    discount.blur(function () {
-        let input_val = $.trim(this.value)
-        if (input_val === '%') {
-            $(this).val(function (index, old) {
-                return old.replace('%', '');
-            });
-        }
-    })
-    discount.bind("paste", function(e){
-        // access the clipboard using the api
-        var pastedData = e.originalEvent.clipboardData.getData('text');
-        if (pastedData.length > 0) {
-            $(this).val(function (index, old) {
-                return old.replace(/[^0-9]/g, '') + '%';
-            });
-        }
-    } );
-    ;
-});
+// $(document).ready(function () {
+//     let discount = $('#discount')
+//     discount.on("input", function () {
+//         // let input_val = this.value
+//         if (this.value.length > 0) {
+//             $(this).val(function (index, old) {
+//                 return old.replace(/[^0-9]/g, '') + '%';
+//             });
+//         }
+//     });
+//     discount.blur(function () {
+//         let input_val = $.trim(this.value)
+//         if (input_val === '%') {
+//             $(this).val(function (index, old) {
+//                 return old.replace('%', '');
+//             });
+//         }
+//     })
+//     discount.bind("paste", function (e) {
+//         // access the clipboard using the api
+//         var pastedData = e.originalEvent.clipboardData.getData('text');
+//         if (pastedData.length > 0) {
+//             $(this).val(function (index, old) {
+//                 return old.replace(/[^0-9]/g, '') + '%';
+//             });
+//         }
+//     });
+//     ;
+// });
 
 
 // функция стирания данных из инпутов расчета
@@ -298,8 +321,6 @@ $('body').on('input', '#name, #last_name', function () {
 $('body').on('input', '#promocode', function () {
     this.value = this.value.replace(/[^0-9a-zA-Zа-яА-Я]/g, '');
 });
-
-
 
 
 // btn1.addEventListener("click", function(){
