@@ -196,6 +196,13 @@
 	display: none;
 }
 
+/* Alarm messages */
+#alarm_new {
+	visibility: hidden;
+	font-size: 13px;
+	color: #dc0000;
+}
+
 
 /* Grids */
 .content_grid1 {

@@ -1,26 +1,19 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
+
 // tg.MainButton.textColor = "#FFFFFF";
 // tg.MainButton.color = "#2cab37";
 
-// let item = "";
 
-// let cost = document.getElementByIdlementById("cost");
-
-
-
-// изменяем значение стоимости
-// let cost_value = 1000000;
-var cost = document.querySelector('#cost');
+// передача telegram_username из telegram
 try {
-    cost.textContent = tg.initDataUnsafe.user.username;
-}
-catch(e) {
+    const tg_username = tg.initDataUnsafe.user.username;
+} catch (e) {
 
 }
 
-    // "₽";
+// "₽";
 
 
 // функция анимации аккордеона
@@ -132,7 +125,7 @@ $(document).ready(function () {
     $('#clear_all').click(function () {
         $('.input_number, #promocode').val('');
         $('.input_number, .input_text').removeClass('input_not_empty');
-        $('input[type="checkbox"]').prop( "checked", false )
+        $('input[type="checkbox"]').prop("checked", false)
     });
 });
 
@@ -156,6 +149,102 @@ $('body').on('input', '#name, #last_name', function () {
 $('body').on('input', '#promocode', function () {
     this.value = this.value.replace(/[^0-9a-zA-Zа-яА-Я]/g, '');
 });
+
+
+// Калькулятор цен
+
+// для тестов записал пока что эти цены. В будущем они будут тянуться из БД
+const price_cover_new = 600
+const price_slide_new = 400
+const price_slide_exist = 350
+const price_clipping_normal = 50
+const price_clipping_hard = 150
+const price_adaptation = 350
+
+
+// временные переменные стоимости каждого инпута
+var cost_slides_new = 0
+var cost_clippings_normal_new = 0
+var cost_clippings_hard_new = 0
+var cost_adaptations_new = 0
+var cost_slides_exist = 0
+var cost_clippings_normal_exist = 0
+var cost_clippings_hard_exist = 0
+var cost_adaptations_exist = 0
+var cost_adaptations_other = 0
+
+var total_cost = 0
+$('#cost').value = total_cost
+
+// events
+
+// NEW
+$('#slides_new').on("input", function () {
+    if (this.value > 1 || !$(this).val()) {
+        $('#alarm_new').css({"visibility": "hidden"})
+        cost_slides_new = this.value * price_slide_new + price_cover_new
+        calculate_cost()
+    } else {
+        $('#alarm_new').css({"visibility": "visible"})
+    }
+})
+
+$('#clippings_normal_new').on("input", function () {
+    cost_clippings_normal_new = this.value * price_clipping_normal
+    calculate_cost()
+})
+
+$('#clippings_hard_new').on("input", function () {
+    cost_clippings_hard_new = this.value * price_clipping_hard
+    calculate_cost()
+})
+
+$('#adaptations_new').on("input", function () {
+    cost_adaptations_new = $('#slides_new').value * price_adaptation
+    calculate_cost()
+})
+
+// EXIST
+$('#slides_exist').on("input", function () {
+    cost_slides_exist = this.value * price_slide_exist
+    calculate_cost()
+})
+
+$('#clippings_normal_exist').on("input", function () {
+    cost_clippings_normal_exist = this.value * price_clipping_normal
+    calculate_cost()
+})
+
+$('#clippings_hard_exist').on("input", function () {
+    cost_clippings_hard_exist = this.value * price_clipping_hard
+    calculate_cost()
+})
+
+$('#adaptations_exist').on("input", function () {
+    cost_adaptations_exist = $('#slides_exist').value * price_adaptation
+    calculate_cost()
+})
+
+// ADAPTATIONS OTHER
+$('#adaptations_other').on("input", function () {
+    cost_adaptations_other = this.value * price_adaptation
+    calculate_cost()
+})
+
+
+function calculate_cost() {
+    total_cost =
+        cost_slides_new +
+        cost_clippings_normal_new +
+        cost_clippings_hard_new +
+        cost_adaptations_new +
+        cost_slides_exist +
+        cost_clippings_normal_exist +
+        cost_clippings_hard_exist +
+        cost_adaptations_exist +
+        cost_adaptations_other
+    $('#cost').value = total_cost
+}
 
 
 // btn1.addEventListener("click", function(){
