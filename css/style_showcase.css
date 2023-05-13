@@ -453,6 +453,16 @@ p[class="content_label2"] {
 	background-image: url('../src/checkbox_focused_g.svg');
 }
 
+/* Custom checkbox disabled unchecked */
+.adapt_checkbox:disabled:not(:checked) + .content_label2::before {
+	background-image: url('/src/checkbox_unchecked_disabled.svg');
+}
+
+/* Custom checkbox disabled checked */
+.adapt_checkbox:disabled:checked + .content_label2::before {
+	background-image: url('/src/checkbox_checked_disabled_g.svg');
+}
+
 
 .grid_buttons {
 	display: grid;

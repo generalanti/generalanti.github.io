@@ -130,6 +130,24 @@ $(document).ready(function () {
 });
 
 
+// отключение чекбоксов, если данные в кол-во слайдов не введены
+function disable_checkbox(input_obj, checkbox_obj) {
+    if (!input_obj.val() || input_obj.val() < 2) {
+        checkbox_obj.attr("disabled", true)
+    } else {
+        checkbox_obj.removeAttr("disabled")
+    }
+}
+
+$('#slides_new').on("input", function () {
+    disable_checkbox($('#slides_new'), $('#adaptations_new'))
+})
+
+$('#slides_exist').on("input", function () {
+    disable_checkbox($('#slides_exist'), $('#adaptations_exist'))
+})
+
+
 // валидация числовых инпутов на темном фоне - можно вводить только числа
 $('body').on('input', '.input_number.dark_bg_content', function () {
     this.value = this.value.replace(/[^0-9]/g, '');
