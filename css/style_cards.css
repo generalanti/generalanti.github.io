@@ -198,9 +198,14 @@
 
 /* Alarm messages */
 #alarm_new {
+	display: inline;
+	position: absolute;
+	top: 221px;
+	left: 256px;
 	visibility: hidden;
 	font-size: 13px;
 	color: #dc0000;
+	transition: all 0.3s cubic-bezier(0.93, 0.1, 0.42, 0.91);
 }
 
 
