@@ -207,10 +207,9 @@ $('#clippings_hard_new').on("input", function () {
 
 $('#adaptations_new').change(function () {
     if (this.checked) {
-        cost_adaptations_new = $('#slides_new').value * price_adaptation
+        cost_adaptations_new = $('#slides_new').val() * price_adaptation
     } else {
         cost_adaptations_new = 0
-
     }
     calculate_cost()
 })
@@ -233,7 +232,7 @@ $('#clippings_hard_exist').on("input", function () {
 
 $('#adaptations_exist').change(function () {
     if (this.checked) {
-        cost_adaptations_exist = $('#slides_exist').value * price_adaptation
+        cost_adaptations_exist = $('#slides_exist').val() * price_adaptation
     } else {
         cost_adaptations_exist = 0
     }
