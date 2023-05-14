@@ -235,34 +235,38 @@ $(document).ready(function () {
     })
 });
 
-// console.log($(this).val())
 
 // функция добавления "%" при вводе числа скидки (и удалении "%" если цифр нет)
 $(document).ready(function () {
     let discount = $('#discount')
     // при вводе в инпут
     discount.on("input", function () {
-        console.log($(this).val())
-        // при каждом вводе цифры в конец добавляется % и каретка переносится перед %
-        if (this.value.length > 0) {
+        // при вставке числа 3 и более разрядов оставляет только первые 2
+        if (this.value.length > 2) {
             $(this).val(function (index, old) {
-                return old.replace(/[^0-9]/g, '') + '%';
+                return old.slice(0, 2) + '%';
             });
-            $(this).caretTo('%');
         }
+        // при вводе в конец добавляется %
+        $(this).val(function (index, old) {
+            return old.replace(/[^0-9]/g, '') + '%';
+        });
+        // каретка переносится перед %
+        $(this).caretTo('%');
     });
-    discount.bind("change input", function(event){
+    // при вводе в инпут (стирании до %) (мгновенно. работает отдельно от .on("input"))
+    discount.bind("change input", function (event) {
         // если в инпуте только %, то он удаляется
         if (this.value === '%') {
             $(this).val('')
         }
     });
     // при фокусе (клике) на инпут
-    discount.on("click", function (){
+    discount.on("click", function () {
         // если есть % то каретка переносится перед %
         if (this.value.indexOf('%') !== -1) {
             $(this).caretTo('%')
-            }
+        }
     });
     // при переносе фокуса (клике на другой элемент страницы)
     discount.blur(function () {
@@ -271,16 +275,6 @@ $(document).ready(function () {
             $(this).val('')
         }
     })
-    discount.bind("paste", function (e) {
-        // access the clipboard using the api
-        var pastedData = e.originalEvent.clipboardData.getData('text');
-        if (pastedData.length > 0) {
-            $(this).val(function (index, old) {
-                return old.replace(/[^0-9]/g, '') + '%';
-            });
-        }
-    });
-    ;
 });
 
 
@@ -308,7 +302,6 @@ function disable_checkbox(input_obj, checkbox_obj) {
 $('#slides_new').on("input", function () {
     disable_checkbox($('#slides_new'), $('#adaptations_new'))
 })
-
 
 
 // валидация числовых инпутов на темном фоне - можно вводить только числа
