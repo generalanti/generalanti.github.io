@@ -250,9 +250,6 @@ $(document).ready(function () {
             });
             $(this).caretTo('%');
         }
-        // else if (this.value === '%') {
-        //     $(this).val('')
-        // }
     });
     discount.bind("change input", function(event){
         // если в инпуте только %, то он удаляется
