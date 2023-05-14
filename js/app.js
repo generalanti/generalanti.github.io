@@ -144,8 +144,6 @@ function calculate_cost() {
                 cost_clippings_hard_exist +
                 cost_adaptations_exist +
                 cost_adaptations_other))
-    console.log(discounted_fraction)
-    console.log($('#discount').val())
     $('#cost').text(total_cost + "₽")
 }
 
@@ -237,36 +235,56 @@ $(document).ready(function () {
     })
 });
 
+// console.log($(this).val())
+
 // функция добавления "%" при вводе числа скидки (и удалении "%" если цифр нет)
-// $(document).ready(function () {
-//     let discount = $('#discount')
-//     discount.on("input", function () {
-//         // let input_val = this.value
-//         if (this.value.length > 0) {
-//             $(this).val(function (index, old) {
-//                 return old.replace(/[^0-9]/g, '') + '%';
-//             });
-//         }
-//     });
-//     discount.blur(function () {
-//         let input_val = $.trim(this.value)
-//         if (input_val === '%') {
-//             $(this).val(function (index, old) {
-//                 return old.replace('%', '');
-//             });
-//         }
-//     })
-//     discount.bind("paste", function (e) {
-//         // access the clipboard using the api
-//         var pastedData = e.originalEvent.clipboardData.getData('text');
-//         if (pastedData.length > 0) {
-//             $(this).val(function (index, old) {
-//                 return old.replace(/[^0-9]/g, '') + '%';
-//             });
-//         }
-//     });
-//     ;
-// });
+$(document).ready(function () {
+    let discount = $('#discount')
+    // при вводе в инпут
+    discount.on("input", function () {
+        console.log($(this).val())
+        // при каждом вводе цифры в конец добавляется % и каретка переносится перед %
+        if (this.value.length > 0) {
+            $(this).val(function (index, old) {
+                return old.replace(/[^0-9]/g, '') + '%';
+            });
+            $(this).caretTo('%');
+        }
+        // else if (this.value === '%') {
+        //     $(this).val('')
+        // }
+    });
+    discount.bind("change input", function(event){
+        // если в инпуте только %, то он удаляется
+        if (this.value === '%') {
+            $(this).val('')
+        }
+    });
+    // при фокусе (клике) на инпут
+    discount.on("click", function (){
+        // если есть % то каретка переносится перед %
+        if (this.value.indexOf('%') !== -1) {
+            $(this).caretTo('%')
+            }
+    });
+    // при переносе фокуса (клике на другой элемент страницы)
+    discount.blur(function () {
+        // если в инпуте только %, то он удаляется
+        if (this.value === '%') {
+            $(this).val('')
+        }
+    })
+    discount.bind("paste", function (e) {
+        // access the clipboard using the api
+        var pastedData = e.originalEvent.clipboardData.getData('text');
+        if (pastedData.length > 0) {
+            $(this).val(function (index, old) {
+                return old.replace(/[^0-9]/g, '') + '%';
+            });
+        }
+    });
+    ;
+});
 
 
 // функция стирания данных из инпутов расчета

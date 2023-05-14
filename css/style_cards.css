@@ -386,29 +386,6 @@ p[class="content_label2"] {
 	box-sizing: border-box;
 }
 
-.discount_label {
-	/* display: flex; */
-}
-
-.discount_label::after {
-	content: '%';
-	position: relative;
-	left: 107px;
-	top: 2px;
-	display: inline-block;
-	flex-shrink: 0;
-	flex-grow: 0;
-	box-sizing: border-box;
-	font-size: 16px;
-	color: #26252a;
-	font-family: "Play", monospace;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 19px;
-	letter-spacing: 0.04em;
-
-}
 
 /* Text input */
 .input_text {
