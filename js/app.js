@@ -113,18 +113,25 @@ $('#adaptations_other').on("input", function () {
 })
 
 // DISCOUNT
-function discount_multiplier() {
-    let discount_val = $('#discount').val()
-    // проверка, что введено именно число. если ввести букву, то может быть NaN
-    if (discount_val > 0) {
-        discounted_fraction = 1 - (discount_val / 100)
+
+// вытаскивает только числовую часть из discount
+function leave_int_discount(raw_discount_val) {
+    return raw_discount_val.replace(/[^\d]+/g, '');
+}
+
+// считает множитель скидки из значения discount
+function discount_multiplier(discount_obj) {
+    let discount_val = discount_obj.val()
+    if (discount_val.length > 0) {
+        let int_discount_val = leave_int_discount(discount_val)
+        discounted_fraction = 1 - (int_discount_val / 100)
     } else {
         discounted_fraction = 1.00
     }
 }
 
 $('#discount').on("input", function () {
-    discount_multiplier()
+    discount_multiplier($(this))
     calculate_cost()
 });
 
@@ -236,7 +243,7 @@ $(document).ready(function () {
 });
 
 
-// функция добавления "%" при вводе числа скидки (и удалении "%" если цифр нет)
+// функция добавления "%" при вводе числа скидки (и удаления "%" если цифр нет)
 $(document).ready(function () {
     let discount = $('#discount')
     // при вводе в инпут
